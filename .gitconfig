@@ -1,0 +1,116 @@
+[user]
+	name = Kerim Berdimyradov
+	email = k.berdimyradov@sdventures.com
+[diff]
+	tool = vimdiff
+[http]
+	sslverify = false
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+  deleted = red
+
+[color "branch"]
+  current = 128 reverse
+  local = yellow
+  remote = cyan
+
+[color "decorate"]
+  head = bold magenta
+  branch = yellow
+  remoteBranch = cyan
+  stash = green
+
+[alias]
+  lg1 = log --decorate --color --pretty=format:'%Cred%h%Creset| %<(75,trunc)%s | %<(10,trunc)%Cgreen%cd%Creset | %<(12,trunc)%C(bold blue)%an%Creset | %C(auto)%D%Creset' --abbrev-commit --date=format:'%d-%m-%Y'
+  lga1 = log --branches --remotes --tags --decorate --color --pretty=format:'%Cred%h%Creset| %<(75,trunc)%s | %<(10,trunc)%Cgreen%cd%Creset | %<(12,trunc)%C(bold blue)%an%Creset | %C(auto)%D%Creset' --abbrev-commit --date=format:'%d-%m-%Y'
+  lg2 = log --color --graph --abbrev-commit --decorate --format=format:'%C(red)%h%C(reset) %C(green)%<(125,trunc)%s%C(reset)%n% %C(dim white)%an | %aD%  (%ar)%C(reset)%C(auto)%d%Creset%n'
+  lga2 = log --branches --remotes --tags --color --graph --abbrev-commit --decorate --format=format:'%C(red)%h%C(reset) %C(green)%<(125,trunc)%s%C(reset)%n% %C(dim white)%an | %aD%  (%ar)%C(reset)%C(auto)%d%Creset%n'
+  lg3 = log --decorate --color --pretty=format:'%Cred%h%Creset| %<(125,trunc)%s | %<(10,trunc)%Cgreen%cd%Creset | %<(12,trunc)%C(bold blue)%an%Creset | %C(auto)%D%Creset' --abbrev-commit --date=format:'%d-%m-%Y'
+  lga3 = log --branches --remotes --tags --decorate --color --pretty=format:'%Cred%h%Creset| %<(125,trunc)%s | %<(10,trunc)%Cgreen%cd%Creset | %<(12,trunc)%C(bold blue)%an%Creset | %C(auto)%D%Creset' --abbrev-commit --date=format:'%d-%m-%Y'
+  elog = log --color --graph --abbrev-commit --decorate --format=format:':dart: %C(red) %h%C(reset) %C(green)%<(125,trunc)%s%C(reset)%C(auto)%d%C(reset)%n :busts_in_silhouette: %C(dim white) %an | %aD%  (%ar)%C(reset)%n'
+  eloga = log --branches --remotes --tags --color --graph --abbrev-commit --decorate --format=format:':dart: %C(red) %h%C(reset) %C(green)%<(125,trunc)%s%C(reset)%C(auto)%d%C(reset)%n :busts_in_silhouette: %C(dim white) %an | %aD%  (%ar)%C(reset)%n'
+  lg = !"git lg1"
+  lga = !"git lga1"
+  xlg = !"git lg3"
+  xlga = !"git lga3"
+  lgw = !"git lg1 --since=1.week"
+  tree = !"git lg2"
+  etree = !"git elog | emojify | less -rX"
+  #temp ones
+  dd = !"git diff HEAD -- ."
+  dd- = !"git diff --color | sed -E \"s/^([^-+ ]*)[-+ ]/\\1/\" | less -r"
+  # Copy into clipboard the name of a current branch
+  cb = rev-parse --abbrev-ref HEAD
+  bn = rev-parse --abbrev-ref HEAD
+  # One letter alias for our most frequent commands. see https://github.com/GitAlias/gitalias
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  f = fetch
+  g = grep
+  l = log
+  m = merge
+  o = checkout
+  p = pull
+  r = remote
+  s = status
+  w = whatchanged
+
+  ### fetch ###
+  fap = fetch --all -p
+
+  ### commit ###
+
+  # commit - amend the tip of the current branch rather than creating a new commit.
+  ca = commit --amend
+
+  # commit - amend the tip of the current branch, and do not edit the message.
+  can = commit --amend --no-edit
+
+  # commit - amend the tip of the current branch, and edit the message.
+  cam = commit --amend --message
+
+  # commit interactive
+  ci = commit --interactive
+
+  # commit with a message
+  cm = commit --message
+
+  # checkout - update the working tree to match a branch or paths. [same as "o" for "out"]
+  co = checkout
+
+  ### status ###
+  # status with short format instead of full details
+  ss = status --short
+
+  # status with short format and showing branch and tracking info.
+  ssb = status --short --branch
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[core]
+	autocrlf = input
+	excludesfile = /Users/berdimyradov/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = ~/.stCommitMsg
+[pager]
+	branch = false

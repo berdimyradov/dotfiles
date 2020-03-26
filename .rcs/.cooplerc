@@ -1,0 +1,19 @@
+#!/bin/bash
+alias bastion='ssh -i ~/.ssh/kberdimyradov -L 13306:217.150.255.32:3306 -L 13307:5.148.165.217:3306 -L 10022:stafffinderweb3.nine.ch:22 -L 10023:stafffinderweb1.nine.ch:22 -L 10002:stafffinderdev02.nine.ch:22 -i kerim.berdimyradov@stafffinderbastion01.nine.ch:/home/kerim.berdimyradov/.ssh/kerim.berdimyradov kerim.berdimyradov@stafffinderbastion01.nine.ch'
+
+stopwildfly() {
+    kill -9 $(ps -a | grep -m1 /Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/bin/java | awk {'print $1'}) && echo "Killed wildfly process"
+}
+
+export PATH=$PATH:/usr/local/Cellar/mysql@5.7/5.7.25/bin
+
+alias cdcoople='cd ~/WorkProjects/coople'
+alias cdcoople-10='cd ~/WorkProjects/coople/source/10_IDE'
+alias cdcoople-emails='cd ~/WorkProjects/coople/coople-emails'
+alias cdcoople-landing='cd ~/WorkProjects/coople/landing-page'
+
+# E2E
+function start_e2e() {
+    cd /Users/keb/WorkProjects/coople/www-e2e-v3
+    node --inspect --inspect-port=3444 node_modules/protractor/built/cli build_e2e/protractor.conf.js --max-repeat=0 --max-instances=1 --specs=build_e2e/**/skill-wage.test.js --params.account=coople-uk
+}
