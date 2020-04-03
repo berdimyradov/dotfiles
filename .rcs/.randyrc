@@ -1,0 +1,27 @@
+#!/bin/bash
+
+ADB_PATH="/usr/local/share/android-sdk/platform-tools/adb"
+
+randy() {
+    case "$1" in
+        menu) menu ;;
+        reload) reload ;;
+        ss) take_screenshot ;;
+    esac
+}
+
+menu() {
+    CMD="${ADB_PATH} shell input keyevent KEYCODE_MENU";
+    eval $CMD;
+}
+
+reload() {
+    CMD="${ADB_PATH} shell input text \"RR\"";
+    eval $CMD;
+}
+
+take_screenshot() {
+    TIMESTAMP=$(date +%s) 
+    CMD="${ADB_PATH} exec-out screencap -p > ${HOME}/Desktop/SS_${TIMESTAMP}.png";
+    eval $CMD;
+}
