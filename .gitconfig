@@ -47,6 +47,7 @@
   tree = !"git lg2"
   etree = !"git elog | emojify | less -rX"
   #temp ones
+  dc = !"git diff --cached"
   dd = !"git diff HEAD -- ."
   dd- = !"git diff --color | sed -E \"s/^([^-+ ]*)[-+ ]/\\1/\" | less -r"
   # Copy into clipboard the name of a current branch
