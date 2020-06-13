@@ -32,5 +32,11 @@ call plug#begin('~/.vim/plugged')
     "Syntastic Code linting errors
     Plug 'vim-syntastic/syntastic'
 
+    
+    "Experimental plugins
+    "Plug 'vifm/vifm.vim'
+    "Plug 'vimwiki/vimwiki'
+    "Plug 'ap/vim-css-color'
+
 filetype plugin indent on 
 call plug#end()

@@ -26,6 +26,7 @@ set backspace=2
 " set belloff=all
 set visualbell t_vb=
 set cursorline
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
 "filetype on
 "filetype plugin on
@@ -33,6 +34,7 @@ filetype plugin indent on
 
 "colorschemes
 colorscheme codedark
+
 
 " Change cursor shape in different modes
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -80,6 +82,36 @@ endif
 "map <C-h> :tabp<CR>
 "map <C-n> :tabnew<CR>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Splits and Tabbed Files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set splitbelow splitright
+
+" Remap splits navigation to just CTRL + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+
+" Make adjusing split sizes a bit more friendly
+"noremap <silent> <C-Left> :vertical resize +3<CR>
+"noremap <silent> <C-Right> :vertical resize -3<CR>
+"noremap <silent> <C-Up> :resize +3<CR>
+"noremap <silent> <C-Down> :resize -3<CR>
+
+" Change 2 split windows from vert to horiz or horiz to vert
+map <Leader>tv <C-w>t<C-w>H
+map <Leader>th <C-w>t<C-w>K
+
+" Removes pipes | that act as seperators on splits
+"set fillchars+=vert:\
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Other Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader> <Plug>(easymotion-prefix)
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -121,6 +153,10 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 "call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
 "call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
 "call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Other Stuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Sintastic configuration!
 set statusline+=%#warningmsg#
