@@ -46,7 +46,8 @@
   lgw = !"git lg1 --since=1.week"
   tree = !"git lg2"
   etree = !"git elog | emojify | less -rX"
-  #temp ones
+  #custom ones
+  aad = !"git add . && git diff --cached"
   dc = !"git diff --cached"
   dd = !"git diff HEAD -- ."
   dd- = !"git diff --color | sed -E \"s/^([^-+ ]*)[-+ ]/\\1/\" | less -r"
