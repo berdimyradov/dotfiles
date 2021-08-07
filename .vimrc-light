@@ -24,6 +24,7 @@ set backspace=2
 " set belloff=all
 set visualbell t_vb=
 set cursorline
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
 "filetype on
 "filetype plugin on
