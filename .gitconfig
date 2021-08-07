@@ -14,10 +14,11 @@
   pager = true
 
 [color "status"]
-  added = green
+  added = green bold ul
   changed = yellow
-  untracked = red
+  untracked = red strike
   deleted = red
+  branch = green bold
 
 [color "branch"]
   current = 128 reverse
@@ -44,6 +45,7 @@
   xlg = !"git lg3"
   xlga = !"git lga3"
   lgw = !"git lg1 --since=1.week"
+    lgcommits = !"git log --color --pretty=format:'%<(12,trunc)%C(dim white)%an%Creset %C(cyan)%h%Creset %<(132,ltrunc)%C(bold)%s %C(dim black)%cd%n%C(dim white)%b' --date=format:'%d-%m-%Y'"
   tree = !"git lg2"
   etree = !"git elog | emojify | less -rX"
   #custom ones
