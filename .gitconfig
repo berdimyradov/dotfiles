@@ -2,10 +2,14 @@
 	name = berdimyradov
 	email = kberdimyradov@gmail.com
 	signingKey = ""
+
 [diff]
 	tool = vimdiff
+  colorMoved = default
+
 [http]
 	sslverify = false
+
 [color]
   diff = auto
   status = auto
@@ -101,27 +105,50 @@
 
   # status with short format and showing branch and tracking info.
   ssb = status --short --branch
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+
 [core]
 	autocrlf = input
 	excludesfile = /Users/berdimyradov/.gitignore_global
 	editor = /usr/bin/vim
+  pager = delta
+
+[merge]
+    conflictstyle = diff3
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
 [commit]
 	template = ~/.stCommitMsg
 	gpgSign = false
+
 [pager]
 	branch = false
+
 [gpg]
 	program = gpg
+
 [tag]
 	forceSignAnnotated = false
+
+[interactive]
+  diffFilter = delta --color-only
+
+[include]
+    path = ~/themes.gitconfig
+
+[delta]
+    features = octo
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
