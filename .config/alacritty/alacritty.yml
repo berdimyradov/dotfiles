@@ -4,19 +4,19 @@ import:
   - ~/.config/alacritty/dracula.yml
 
 window:
-  opacity: 0.85
+  opacity: 0.95
   padding:
     y: 0
     x: 0
-  dynamic_padding: false
+  dynamic_padding: true
   decorations: buttonless
+  # startup_mode: Maximized | SimpleFullscreen | Windowed | Fullscreen
   startup_mode: SimpleFullscreen
 
 font:
   normal:
     family: "JetBrainsMono Nerd Font"
-  size: 15.0
-
+  size: 14.0
 
 key_bindings:
   - { key: Return,   mods: Command,         action: ToggleSimpleFullscreen }
