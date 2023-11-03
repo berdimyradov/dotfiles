@@ -108,13 +108,6 @@ else
     print "404: ~/.rcs/.dockerrc not found."
 fi
 
-# SDV config
-if [ -f ~/.rcs/.sdvrc ]; then
-    source ~/.rcs/.sdvrc
-else
-    print "404: ~/.rcs/.sdvrc not found."
-fi
-
 # Flutter config
 if [ -f ~/.rcs/.flutterrc ]; then
     source ~/.rcs/.flutterrc
