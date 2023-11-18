@@ -76,6 +76,7 @@ alias vim="nvim"
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias prettyjson="python -m json.tool"
+
 # MY CUSTOM CONFIGS HERE!!!
 export PATH="/usr/local/bin:${PATH}" # User Homebrew installed as default
 E_NERD="🤓"
@@ -100,6 +101,10 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 [[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
 # Adding shell-integration
 source ~/.iterm2_shell_integration.zsh
+
+# Android configs
+export PATH=$PATH:~/Library/Android/sdk/platform-tools
+export PATH=$PATH:~/Library/Android/sdk/emulator
 
 # Docker config
 if [ -f ~/.rcs/.dockerrc ]; then
@@ -126,7 +131,6 @@ fi
 
 # bindkey -v
 alias config='/usr/bin/git --git-dir=/Users/berdimyradov/dotfiles/ --work-tree=/Users/berdimyradov'
-
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
