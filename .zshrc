@@ -103,8 +103,8 @@ export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 source ~/.iterm2_shell_integration.zsh
 
 # Android configs
-export PATH=$PATH:~/Library/Android/sdk/platform-tools
-export PATH=$PATH:~/Library/Android/sdk/emulator
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator
 
 # Docker config
 if [ -f ~/.rcs/.dockerrc ]; then
@@ -130,7 +130,8 @@ fi
 #fi
 
 # bindkey -v
-alias config='/usr/bin/git --git-dir=/Users/berdimyradov/dotfiles/ --work-tree=/Users/berdimyradov'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
