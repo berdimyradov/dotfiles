@@ -1,0 +1,9 @@
+gui:
+  nerdFontsVersion: "3"
+  # theme:
+  #   activeBorderColor:
+  #     - red
+  #     - bold
+git:
+  # lazylog is an alias which need to be add to .gitconfig
+  branchLogCmd: 'git lazylog {{branchName}}'
