@@ -53,7 +53,7 @@
     lgcommits = !"git log --color --pretty=format:'%<(12,trunc)%C(dim white)%an%Creset %C(cyan)%h%Creset %<(132,ltrunc)%C(bold)%s %C(dim black)%cd%n%C(dim white)%b' --date=format:'%d-%m-%Y'"
   tree = !"git lg2"
   etree = !"git elog | emojify | less -rX"
-  lazylog = !"git log --graph --format=tformat:'%<|(7)%C(#ff69b4)%<|(1)%d%C(reset) %<|(-100,trunc)%s %C(#777777)| %h%x09%<(15,trunc)%al %x09%ah%n'"
+  lazylog = !"git log --graph --color=always --format=tformat:'%<|(7)%C(#ff69b4)%<|(1)%d%C(reset) %<|(100,trunc)%s %C(#777777)| %h%x09%<(15,trunc)%al %x09%ah%n'"
   #custom ones
   aad = !"git add . && git diff --cached"
   dc = !"git diff --cached"
