@@ -79,6 +79,8 @@ alias zshconfig="vim ~/.zshrc"
 alias prettyjson="python -m json.tool"
 
 # MY CUSTOM CONFIGS HERE!!!
+export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
 export PATH="/usr/local/bin:${PATH}" # User Homebrew installed as default
 E_NERD="🤓"
 E_FLAG_TM="🇹🇲"
