@@ -19,13 +19,6 @@ export PATH="/usr/local/bin:${PATH}" # User Homebrew installed as default
 E_NERD="🤓"
 E_FLAG_TM="🇹🇲"
 
-# Git branch in prompt.
-# parse_git_branch() {
-#    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-# }
-# set your prompt
-# export PS1="%n$E_FLAG_TM \%m : "
-
 # Color ls comand export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
