@@ -1,7 +1,8 @@
 live_config_reload: true
 
 import:
-  - ~/.config/alacritty/dracula.yml
+  # - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/github_dark_high_contrast.yml
 
 window:
   opacity: 0.95
@@ -11,12 +12,12 @@ window:
   dynamic_padding: true
   decorations: buttonless
   # startup_mode: Maximized | SimpleFullscreen | Windowed | Fullscreen
-  startup_mode: SimpleFullscreen
+  startup_mode: Maximized
 
 font:
   normal:
     family: "JetBrainsMono Nerd Font"
-  size: 14.0
+  size: 12.5
 
 key_bindings:
   - { key: Return,   mods: Command,         action: ToggleSimpleFullscreen }
