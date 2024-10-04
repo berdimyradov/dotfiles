@@ -15,17 +15,18 @@ export LC_ALL=en_US.UTF-8
 # MY CUSTOM CONFIGS HERE!!!
 export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
+
 export PATH="/usr/local/bin:${PATH}" # User Homebrew installed as default
-E_NERD="🤓"
-E_FLAG_TM="🇹🇲"
+export PATH=$PATH:/opt/homebrew/bin
 
 # Color ls comand export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
 # Automatic aliases for grc
-[[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
+# [[ -s "/usr/local/etc/grc.zsh" ]] && source /usr/local/etc/grc.zsh
+
 # Adding shell-integration
-source ~/.iterm2_shell_integration.zsh
+# source ~/.iterm2_shell_integration.zsh
 
 # Android configs
 export ANDROID_HOME=~/Library/Android/sdk
