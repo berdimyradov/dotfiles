@@ -1,8 +1,8 @@
 live_config_reload = true
 
 import = [
-    # - "~/.config/alacritty/dracula.yml"
-    "~/.config/alacritty/github_dark_high_contrast.toml"
+  # "~/.config/alacritty/dracula.yml",
+  "~/.config/alacritty/github_dark_high_contrast.toml"
 ]
 
 [window]
@@ -16,39 +16,20 @@ startup_mode = "Maximized" # Options: Maximized | SimpleFullscreen | Windowed | 
 normal.family = "JetBrainsMono Nerd Font"
 size = 12.5
 
-[[keyboard.bindings]]
-key = "Return"
-mods = "Command"
-action = "ToggleSimpleFullscreen"
+[keyboard]
+bindings = [
+  # Toggle fullscreen
+{ key = "Return", mods = "Command", action = "ToggleSimpleFullscreen" },
 
-[[keyboard.bindings]]
-key = "Left"
-mods = "Alt"
-chars = "\\x1bb"  # Skip word left
+  # Navigation - Move by word
+{ key = "Left",  mods = "Alt", chars = "\u001BB" },  # Skip word left
+{ key = "Right", mods = "Alt", chars = "\u001BF" },  # Skip word right
 
-[[keyboard.bindings]]
-key = "Right"
-mods = "Alt"
-chars = "\\x1bf"  # Skip word right
+  # Home & End keys
+{ key = "Left",  mods = "Command", chars = "\u001BOH", mode = "AppCursor" },  # Home
+{ key = "Right", mods = "Command", chars = "\u001BOF", mode = "AppCursor" },  # End
 
-[[keyboard.bindings]]
-key = "Left"
-mods = "Command"
-chars = "\\x1bOH"
-mode = "AppCursor"  # Home
-
-[[keyboard.bindings]]
-key = "Right"
-mods = "Command"
-chars = "\\x1bOF"
-mode = "AppCursor"  # End
-
-[[keyboard.bindings]]
-key = "Back"
-mods = "Command"
-chars = "\\x15"  # Delete line
-
-[[keyboard.bindings]]
-key = "Back"
-mods = "Alt"
-chars = "\\x1b\\x7f"  # Delete word
+  # Delete bindings
+{ key = "Back", mods = "Command", chars = "\u0015" },      # Delete line
+{ key = "Back", mods = "Alt", chars = "\u001B\u007F" }     # Delete word
+]
