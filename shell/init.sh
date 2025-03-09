@@ -2,6 +2,7 @@ source ~/shell/zsh/zsh.sh
 
 source ~/shell/aliases.sh
 source ~/shell/exports.sh
+source ~/shell/fzf.sh
 source ~/shell/git/init.sh
 
 # source ~/shell/docker.sh
