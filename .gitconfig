@@ -107,6 +107,12 @@
   # status with short format and showing branch and tracking info.
   ssb = status --short --branch
 
+  # Show local branches:
+  # - Untracked first
+  # - Format: green local...red remote
+  btrack = "!git for-each-ref --format='%(refname:short) => %(upstream:short)' refs/heads/ | awk -F' => ' 'function green(s) { return \"\\033[32m\" s \"\\033[0m\" } function red(s) { return \"\\033[31m\" s \"\\033[0m\" } $2 == \"\" { untracked[++u] = green($1) \"...\"; next } { tracked[++t] = green($1) \"...\" red($2) } END { for (i = 1; i <= u; i++) print untracked[i]; for (i = 1; i <= t; i++) print tracked[i]; }'"
+
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
