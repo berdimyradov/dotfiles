@@ -97,6 +97,9 @@
   # commit with a message
   cm = commit --message
 
+  # commit with a timestamped message
+  cmts = !git commit -m \"$(date '+%Y-%m-%d %H:%M:%S')\"
+
   # checkout - update the working tree to match a branch or paths. [same as "o" for "out"]
   co = checkout
 
