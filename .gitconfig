@@ -77,44 +77,59 @@
   s = status
   w = whatchanged
 
+  ### config ###
+  conf = config --global --edit
+  cge  = config --global --edit
+
   ### fetch ###
   fap = fetch --all -p
 
   ### commit ###
+  # Amend the tip of the current branch
+  ca    = commit --amend
+  # Amend without editing the message
+  can   = commit --amend --no-edit
+  # Amend and set a new message
+  cam   = commit --amend --message
+  # Interactive commit
+  ci    = commit --interactive
+  # Commit with a message
+  cm    = commit --message
+  # Commit with a timestamped message
+  cmts  = commit -m "$(date '+%Y-%m-%d %H:%M:%S')"
 
-  # commit - amend the tip of the current branch rather than creating a new commit.
-  ca = commit --amend
-
-  # commit - amend the tip of the current branch, and do not edit the message.
-  can = commit --amend --no-edit
-
-  # commit - amend the tip of the current branch, and edit the message.
-  cam = commit --amend --message
-
-  # commit interactive
-  ci = commit --interactive
-
-  # commit with a message
-  cm = commit --message
-
-  # commit with a timestamped message
-  cmts = !git commit -m \"$(date '+%Y-%m-%d %H:%M:%S')\"
-
-  # checkout - update the working tree to match a branch or paths. [same as "o" for "out"]
-  co = checkout
+  ### checkout ###
+  # Switch branches or restore files
+  co    = checkout
 
   ### status ###
-  # status with short format instead of full details
-  ss = status --short
+  # Short status
+  ss    = status --short
+  # Short status with branch and tracking info
+  ssb   = status --short --branch
 
-  # status with short format and showing branch and tracking info.
-  ssb = status --short --branch
-
-  # Show local branches:
-  # - Untracked first
-  # - Format: green local...red remote
+  ### branch tracking ###
+  # Show local branches (untracked first), format: green local...red remote
   btrack = "!git for-each-ref --format='%(refname:short) => %(upstream:short)' refs/heads/ | awk -F' => ' 'function green(s) { return \"\\033[32m\" s \"\\033[0m\" } function red(s) { return \"\\033[31m\" s \"\\033[0m\" } $2 == \"\" { untracked[++u] = green($1) \"...\"; next } { tracked[++t] = green($1) \"...\" red($2) } END { for (i = 1; i <= u; i++) print untracked[i]; for (i = 1; i <= t; i++) print tracked[i]; }'"
 
+  ### worktree ###
+  wt       = worktree
+  wtls     = worktree list
+  wta      = worktree add
+  wtrm     = worktree remove
+  wtm      = worktree move
+  wtp      = worktree prune
+  wtrepair = worktree repair
+  wtlock   = worktree lock
+  wtunlock = worktree unlock
+
+  ### Combinations ###
+  # Add all && Commit with message && Push
+  acp = "!f() { \
+    git add . && \
+    git commit -m \"$1\" && \
+    git push; \
+    }; f"
 
 [filter "lfs"]
 	process = git-lfs filter-process
