@@ -1,4 +1,4 @@
-source ~/shell/zsh/zsh.sh
+source ~/shell/zsh/init.sh
 
 source ~/shell/aliases.sh
 source ~/shell/exports.sh
