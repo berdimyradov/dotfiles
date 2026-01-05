@@ -29,3 +29,6 @@ alias config='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # Prints: YYYY MonthName D HH:MM:SS
 alias now='date +"%Y %B %-d %H:%M:%S"'
+
+# Display public IP address and country location
+alias myip='echo "IP: $(curl -s ifconfig.co) | Country: $(curl -s ifconfig.co/country)"'
