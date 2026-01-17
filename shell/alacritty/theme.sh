@@ -38,7 +38,22 @@ choose_theme() {
   fi
 }
 
-picked="$(choose_theme)"
+# If argument provided, try to find matching theme
+if [ -n "${1:-}" ]; then
+  # Look for partial match in filename
+  for t in "${THEMES[@]}"; do
+    if [[ "$(basename "$t")" == *"$1"* ]]; then
+      picked="$t"
+      break
+    fi
+  done
+  if [ -z "${picked:-}" ]; then
+    echo "Error: No theme found matching '$1'"
+    exit 1
+  fi
+else
+  picked="$(choose_theme)"
+fi
 [ -n "$picked" ] || exit 0
 
 # Convert absolute path -> "~/" form (matches your existing import style)
@@ -53,5 +68,5 @@ fi
 sed -i.bak -E "/import[[:space:]]*=[[:space:]]*\[/,/]/ s|\"[^\"]+\"|\"${theme_path}\"|" "$CONFIG"
 
 
-echo "Theme set to: $theme_path"
-echo "Backup written to: ${CONFIG}.bak"
+theme_name=$(basename "$picked" .toml)
+echo "🖥️ Alacritty theme set to: $theme_name"

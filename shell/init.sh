@@ -11,6 +11,7 @@ source ~/shell/git/init.sh
 
 # Terminal
 source ~/shell/alacritty/init.sh
+source ~/shell/terminal.sh
 
 # Optional
 # source ~/shell/docker.sh
