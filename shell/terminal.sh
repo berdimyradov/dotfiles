@@ -2,10 +2,8 @@
 export PATH="$PATH:~/.lmstudio/bin"
 # End of LM Studio CLI section
 
-
 # Added by Antigravity
-export PATH="$PATH:~/.antigravity/antigravity/bin"
-export PATH="$PATH:~/.local/bin"
+export PATH="~/.antigravity/antigravity/bin:$PATH"
 
 # Theme switching functions for Alacritty, Tmux, and Neovim
 function dark() {
