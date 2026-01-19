@@ -1,0 +1,14 @@
+gui:
+  #authorColors:
+  # 'Kerim Berdimyradov': '#5D3FD3'
+  # 'berdimyradov': '#5D3FD3'
+  #  '*': '#C0C0C0'
+  nerdFontsVersion: "3"
+  theme:
+    selectedLineBgColor:
+      - reverse
+  border: rounded
+# git:
+#   branchLogCmd: "git log --graph --color=always --format=format:'%<|(7)%C(#ff69b4)%<|(1)%d%C(reset) %<|(80,trunc)%s %C(#777777)| %h%x09%<(15,trunc)%al %x09%ah' {{branchName}}"
+os:
+  edit: "nvim {{filename}}"

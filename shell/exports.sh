@@ -16,6 +16,11 @@ export LC_ALL=en_US.UTF-8
 export PATH="/usr/local/bin:${PATH}" # User Homebrew installed as default
 export PATH=$PATH:/opt/homebrew/bin
 
+# XDG Base directory
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+
 # Color ls comand export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
 
