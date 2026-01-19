@@ -1,0 +1,8 @@
+[include]
+    path = ./themes.gitconfig
+
+[delta]
+    ; features = gruvmax-fang
+    features = colibri
+    navigate = true    # use n and N to move between diff sections
+    side-by-side = true
