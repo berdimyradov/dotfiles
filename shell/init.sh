@@ -1,6 +1,8 @@
 # Main
 
 # Zsh
+# https://github.com/zsh-users
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/shell/zsh/init.sh
 
 # General
