@@ -20,8 +20,9 @@ fi
 
 # --- 2. CONFIG ---
 if create_session "config" "$HOME/.config"; then
+  tmux rename-window -t "config:1" "config"
   tmux new-window -t "config" -n "shell" -c "$HOME/shell"
-  tmux new-window -t "config" -c "$HOME"
+  tmux new-window -t "config" n "vifm" -c "$HOME"
   tmux new-window -t "config" -c "$HOME"
 fi
 
