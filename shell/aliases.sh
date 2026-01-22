@@ -30,5 +30,10 @@ alias config='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 # Prints: YYYY MonthName D HH:MM:SS
 alias now='date +"%Y %B %-d %H:%M:%S"'
 
+# AI-code-agents shortcuts
+alias oc='opencode'
+alias cc='claude'
+alias cx='codex'
+
 # Display public IP address and country location
 alias myip='echo -e "🌐 IP: $(curl -s ipinfo.io/ip)\n📍 Country: $(curl -s ipinfo.io/country)"'
