@@ -1,12 +1,22 @@
+#
+# See: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#default
+#
 gui:
   #authorColors:
   # 'Kerim Berdimyradov': '#5D3FD3'
   # 'berdimyradov': '#5D3FD3'
   #  '*': '#C0C0C0'
   nerdFontsVersion: "3"
+  # Fraction of the total screen width to use for the left side section. You may
+  # want to pick a small number (e.g. 0.2) if you're using a narrow screen, so
+  # that you can see more of the main section.
+  # Number from 0 to 1.0.
+  # Default is 0.3333
+  sidePanelWidth: 0.25
   theme:
-    selectedLineBgColor:
-      - reverse
+    # selectedLineBgColor:
+      # - '#D3D3D3'
+      # - '#ADD8E6'
   border: rounded
 # git:
 #   branchLogCmd: "git log --graph --color=always --format=format:'%<|(7)%C(#ff69b4)%<|(1)%d%C(reset) %<|(80,trunc)%s %C(#777777)| %h%x09%<(15,trunc)%al %x09%ah' {{branchName}}"
