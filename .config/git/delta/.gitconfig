@@ -1,8 +1,10 @@
+[interactive]
+  diffFilter = delta --color-only
+
 [include]
     path = ./themes.gitconfig
 
 [delta]
-    ; features = gruvmax-fang
-    features = colibri
+    features = hoopoe
     navigate = true    # use n and N to move between diff sections
     side-by-side = true

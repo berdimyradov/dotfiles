@@ -153,6 +153,9 @@
 	editor = /usr/bin/vim
   pager = delta
 
+[include]
+  path = ~/.config/git/delta/.gitconfig
+
 [merge]
     conflictstyle = diff3
 
@@ -177,8 +180,3 @@
 [tag]
 	forceSignAnnotated = false
 
-[interactive]
-  diffFilter = delta --color-only
-
-[include]
-    path = ~/.config/git/delta/.gitconfig

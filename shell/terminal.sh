@@ -10,10 +10,12 @@ function dark() {
   ~/shell/alacritty/theme.sh "github-dark-high-contrast"
   ~/shell/tmux/theme.sh "mocha"
   ~/shell/nvim/colorscheme.sh "mocha"
+  ~/shell/git/delta-theme.sh "colibri"
 }
 
 function light() {
   ~/shell/alacritty/theme.sh "catppuccin-latte"
   ~/shell/tmux/theme.sh "latte"
   ~/shell/nvim/colorscheme.sh "latte"
+  ~/shell/git/delta-theme.sh "hoopoe"
 }
