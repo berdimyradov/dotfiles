@@ -35,5 +35,8 @@ alias oc='opencode'
 alias cc='claude'
 alias cx='codex'
 
+# pnpm shortcut
+alias pm='pnpm'
+
 # Display public IP address and country location
 alias myip='echo -e "🌐 IP: $(curl -s ipinfo.io/ip)\n📍 Country: $(curl -s ipinfo.io/country)"'
