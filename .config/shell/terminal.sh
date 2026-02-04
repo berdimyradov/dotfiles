@@ -5,13 +5,19 @@ export PATH="$PATH:~/.lmstudio/bin"
 # Added by Antigravity
 export PATH="~/.antigravity/antigravity/bin:$PATH"
 
-# Theme switching functions for Alacritty, Tmux, and Neovim
+# ================================================================================
+# Theme switching functions
+# ================================================================================
 function dark() {
   ~/.config/shell/alacritty/theme.sh "github-dark-high-contrast"
   ~/.config/shell/tmux/theme.sh "mocha"
   ~/.config/shell/nvim/colorscheme.sh "mocha"
   ~/.config/shell/git/delta-theme.sh "colibri"
-  alias lgit="lazygit:dark"
+  ~/.config/lazygit/theme.sh "dracula.dark"
+
+  echo "================================================================================";
+  echo "🌚 Switched to dark theme";
+  echo "================================================================================";
 }
 
 function light() {
@@ -19,5 +25,9 @@ function light() {
   ~/.config/shell/tmux/theme.sh "latte"
   ~/.config/shell/nvim/colorscheme.sh "latte"
   ~/.config/shell/git/delta-theme.sh "hoopoe"
-  alias lgit="lazygit:light"
+  ~/.config/lazygit/theme.sh "light"
+
+  echo "================================================================================";
+  echo "🌝 Switched to light theme";
+  echo "================================================================================";
 }
