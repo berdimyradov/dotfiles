@@ -2,10 +2,6 @@
 # See: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#default
 #
 gui:
-  #authorColors:
-  # 'Kerim Berdimyradov': '#5D3FD3'
-  # 'berdimyradov': '#5D3FD3'
-  #  '*': '#C0C0C0'
   nerdFontsVersion: "3"
   # Fraction of the total screen width to use for the left side section. You may
   # want to pick a small number (e.g. 0.2) if you're using a narrow screen, so
