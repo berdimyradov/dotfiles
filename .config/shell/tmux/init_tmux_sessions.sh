@@ -46,9 +46,9 @@ if create_session "finloft" "$HOME/work/finloft"; then
   tmux new-window -t "finloft" -n "git" -c "$HOME/work/finloft"
   tmux send-keys -t "finloft:2" "lazygit" Enter
 
-  # Window 3 & 4: Claude Code
-  tmux new-window -t "finloft" -n "claude-1" -c "$HOME/work/finloft"
-  tmux new-window -t "finloft" -n "claude-2" -c "$HOME/work/finloft"
+  # Window 3 & 4: Code Agents
+  tmux new-window -t "finloft" -n "code-agent-1" -c "$HOME/work/finloft"
+  tmux new-window -t "finloft" -n "code-agent-2" -c "$HOME/work/finloft"
 
   # Window 5: Misc
   tmux new-window -t "finloft" -n "misc" -c "$HOME/work/finloft"

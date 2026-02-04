@@ -1,7 +1,7 @@
-source ~/shell/git/git-prompt.sh
+source ~/.config/shell/git/git-prompt.sh
 
-#source ~/shell/git/git-completion.zsh
-# fpath=(~/shell/git $fpath)
+#source ~/.config/shell/git/git-completion.zsh
+# fpath=(~/.config/shell/git $fpath)
 
 # Git branch in prompt.
 # parse_git_branch() {
