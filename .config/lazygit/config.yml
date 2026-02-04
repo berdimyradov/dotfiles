@@ -13,13 +13,10 @@ gui:
   # Number from 0 to 1.0.
   # Default is 0.3333
   sidePanelWidth: 0.25
-  theme:
-  # selectedLineBgColor:
-  # - '#D3D3D3'
-  # - '#ADD8E6'
   border: rounded
   # git:
   #   branchLogCmd: "git log --graph --color=always --format=format:'%<|(7)%C(#ff69b4)%<|(1)%d%C(reset) %<|(80,trunc)%s %C(#777777)| %h%x09%<(15,trunc)%al %x09%ah' {{branchName}}"
+
 os:
-  editPreset: 'nvim'
+  editPreset: "nvim"
   open: "agy {{filename}}"
