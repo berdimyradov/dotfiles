@@ -59,6 +59,7 @@
   dc = !"git diff --cached"
   dd = !"git diff HEAD -- ."
   dd- = !"git diff --color | sed -E \"s/^([^-+ ]*)[-+ ]/\\1/\" | less -r"
+  ds = !"git diff --staged"
   # Copy into clipboard the name of a current branch
   cb = rev-parse --abbrev-ref HEAD
   bn = rev-parse --abbrev-ref HEAD
