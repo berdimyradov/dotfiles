@@ -9,7 +9,7 @@ export PATH="~/.antigravity/antigravity/bin:$PATH"
 # Theme switching functions
 # ================================================================================
 function dark() {
-  ~/.config/shell/alacritty/theme.sh "github-dark-high-contrast"
+  alac:theme "github-dark-high-contrast"
   ~/.config/shell/tmux/theme.sh "mocha"
   ~/.config/shell/nvim/colorscheme.sh "mocha"
   ~/.config/shell/git/delta-theme.sh "colibri"
@@ -21,7 +21,7 @@ function dark() {
 }
 
 function light() {
-  ~/.config/shell/alacritty/theme.sh "catppuccin-latte"
+  alac:theme "catppuccin-latte"
   ~/.config/shell/tmux/theme.sh "latte"
   ~/.config/shell/nvim/colorscheme.sh "latte"
   ~/.config/shell/git/delta-theme.sh "hoopoe"

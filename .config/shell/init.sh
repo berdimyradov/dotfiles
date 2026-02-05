@@ -15,7 +15,7 @@ source ~/.config/shell/git/init.sh
 source ~/.config/lazygit/init.sh
 
 # Terminal
-source ~/.config/shell/alacritty/init.sh
+source ~/.config/alacritty/init.sh
 source ~/.config/shell/terminal.sh
 
 # Optional
