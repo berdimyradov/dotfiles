@@ -19,11 +19,12 @@ if [[ -z "$THEME_NAME" ]]; then
 fi
 
 # Construct potential theme file paths
-THEME_FILE="$THEMES_DIR/$THEME_NAME.yml"
+THEME_BASENAME="${THEME_NAME%.yml}"
+THEME_FILE="$THEMES_DIR/$THEME_BASENAME.yml"
 
 if [[ ! -f "$THEME_FILE" ]]; then
     # Try looking in subdirectories (like catppuccin)
-    MATCH=$(find "$THEMES_DIR" -name "$THEME_NAME.yml" | head -n 1)
+    MATCH=$(find "$THEMES_DIR" -path "*/$THEME_BASENAME.yml" | head -n 1)
     if [[ -n "$MATCH" ]]; then
         THEME_FILE="$MATCH"
     else
@@ -35,4 +36,4 @@ fi
 # Create symlink for active theme
 ln -sf "$THEME_FILE" "$ACTIVE_THEME"
 
-echo "🔀 LazyGit theme set to: $(basename "$THEME_FILE" .yml)"
+echo "🔀 LazyGit theme set to: $(basename "$THEME_FILE" .yml) (${THEME_FILE#$THEMES_DIR/})"
