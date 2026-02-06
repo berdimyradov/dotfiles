@@ -10,7 +10,7 @@ export PATH="~/.antigravity/antigravity/bin:$PATH"
 # ================================================================================
 function dark() {
   alac:theme "github-dark-high-contrast"
-  ~/.config/shell/tmux/theme.sh "mocha"
+  tmux:theme "mocha"
   ~/.config/shell/nvim/colorscheme.sh "mocha"
   ~/.config/shell/git/delta-theme.sh "colibri"
   ~/.config/lazygit/theme.sh "dracula.dark"
@@ -22,7 +22,7 @@ function dark() {
 
 function light() {
   alac:theme "catppuccin-latte"
-  ~/.config/shell/tmux/theme.sh "latte"
+  tmux:theme "latte"
   ~/.config/shell/nvim/colorscheme.sh "latte"
   ~/.config/shell/git/delta-theme.sh "hoopoe"
   ~/.config/lazygit/theme.sh "light"

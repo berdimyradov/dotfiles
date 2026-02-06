@@ -11,8 +11,9 @@ source ~/.config/shell/exports.sh
 source ~/.config/shell/fzf.sh
 source ~/.config/shell/git/init.sh
 
-# LazyGit
+# TUI
 source ~/.config/lazygit/init.sh
+source ~/.config/tmux/init.sh
 
 # Terminal
 source ~/.config/alacritty/init.sh

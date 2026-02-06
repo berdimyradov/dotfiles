@@ -12,12 +12,16 @@ if [[ -z "$FLAVOR" ]]; then
   exit 1
 fi
 
-THEME_FILE="$HOME/.config/tmux/theme_flavor.conf"
+THEME_FILE="$HOME/.config/tmux/themes/catppuccin/active_flavor.conf"
 
-# Write the config to set the catppuccin flavor
-cat > "$THEME_FILE" <<EOF
-set -g @catppuccin_flavor '${FLAVOR}'
-EOF
+# Link the active flavor config
+FLAVOR_FILE="$(dirname "$THEME_FILE")/${FLAVOR}.conf"
+if [[ -f "$FLAVOR_FILE" ]]; then
+  ln -sf "$FLAVOR_FILE" "$THEME_FILE"
+else
+  echo "Error: Flavor file $FLAVOR_FILE not found."
+  exit 1
+fi
 
 # Reload tmux config if server is running
 if pgrep -x "tmux" > /dev/null; then
