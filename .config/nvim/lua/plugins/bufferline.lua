@@ -8,9 +8,7 @@ return {
     "akinsho/bufferline.nvim",
     opts = {
       options = {
-        numbers = "both",
-        indicator_icon = ">>>>>> ",
-        offsets = { { text = "foobar me", padding = 2 } },
+        -- numbers = "both",
       },
     },
   },
