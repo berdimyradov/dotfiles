@@ -10,6 +10,7 @@ source ~/.config/shell/aliases.sh
 source ~/.config/shell/exports.sh
 source ~/.config/shell/fzf.sh
 source ~/.config/shell/git/init.sh
+source ~/.config/shell/theme.sh
 
 # TUI
 source ~/.config/lazygit/init.sh
