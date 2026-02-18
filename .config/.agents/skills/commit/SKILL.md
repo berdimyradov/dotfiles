@@ -31,6 +31,7 @@ Use when the user wants a Conventional Commit message based on staged changes.
 - `:construction_worker:` ci/build
 - `:see_no_evil:` .*ignore files
 - `:rotating_light:` compilers/linters
+- `:robot:` ai/ml/code-agents
 
 ## Writing Rules
 
