@@ -3,6 +3,7 @@
 # Alacritty Theme Switcher
 # Sets the active theme by symlinking the desired theme file to active_theme.toml
 #
+# More themes: https://github.com/alacritty/alacritty-theme?tab=readme-ov-file
 
 set -e
 
@@ -49,15 +50,15 @@ if [ -n "$THEME_INPUT" ]; then
     # Try looking in subdirectories or partial match
     MATCH=$(find "$THEMES_DIR" -path "*/$THEME_BASENAME.toml" | head -n 1)
     if [[ -z "$MATCH" ]]; then
-        # Last resort: partial filename match
-        for t in "${THEMES[@]}"; do
-            if [[ "$(basename "$t")" == *"$THEME_BASENAME"* ]]; then
-                MATCH="$t"
-                break
-            fi
-        done
+      # Last resort: partial filename match
+      for t in "${THEMES[@]}"; do
+        if [[ "$(basename "$t")" == *"$THEME_BASENAME"* ]]; then
+          MATCH="$t"
+          break
+        fi
+      done
     fi
-    
+
     if [[ -n "$MATCH" ]]; then
       THEME_FILE="$MATCH"
     else

@@ -9,7 +9,6 @@ function system_appereance() {
   fi
 }
 
-
 # ================================================================================
 # Theme switching functions
 # ================================================================================
@@ -21,7 +20,7 @@ function theme() {
   fi
 
   if [[ "$THEME_MODE" == "dark" ]]; then
-    alac:theme "github-dark-high-contrast"
+    alac:theme "aura"
     tmux:theme "mocha"
     ~/.config/shell/nvim/colorscheme.sh "mocha"
     ~/.config/shell/git/delta-theme.sh "colibri"
