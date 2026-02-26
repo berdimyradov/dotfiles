@@ -27,4 +27,4 @@ if pgrep -x tmux >/dev/null; then
   tmux source-file "$HOME/.config/tmux/tmux.conf"
 fi
 
-echo "Tmux gruvbox set to: $GRUVBOX_THEME"
+echo "🪟 Tmux gruvbox set to: $GRUVBOX_THEME"

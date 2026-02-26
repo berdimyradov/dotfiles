@@ -34,9 +34,12 @@ fi
 
 # --- 4. FINLOFT ---
 if create_session "finloft" "$HOME/work/finloft"; then
+  # Window 0: Vim
+  tmux new-window -t "finloft:0" -n "vim" -c "$HOME/work/finloft"
+
   # Window 1: Dev Services (2 panes)
   tmux rename-window -t "finloft:1" "services"
-  tmux split-window -v -t "finloft:1" -c "$HOME/work/finloft"
+  tmux split-window -h -t "finloft:1" -c "$HOME/work/finloft"
 
   # Send commands to the specific panes
   tmux send-keys -t "finloft:1.1" "pnpm -F @finloft/mobile start:dev"  # Top pane
@@ -57,6 +60,14 @@ fi
 # --- 5. WORK ---
 if create_session "work" "$HOME/work"; then
   tmux new-window -t "work" -c "$HOME/work"
+  tmux new-window -t "work" -c "$HOME/work"
+fi
+
+# --- 6. TamTam ---
+if create_session "tamtam" "$HOME/work/tamtam"; then
+  tmux new-window -t "tamtam" -n "main" -c "$HOME/work/tamtam"
+  tmux new-window -t "tamtam-design" -n "design" -c "$HOME/work/tamtam-design"
+  tmux new-window -t "tamtam-mobile" -n "mobile" -c "$HOME/work/tamtam-mobile"
 fi
 
 echo "Tmux sessions initialized!"
