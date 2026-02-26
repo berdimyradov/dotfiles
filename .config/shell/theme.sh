@@ -20,20 +20,20 @@ function theme() {
   fi
 
   if [[ "$THEME_MODE" == "dark" ]]; then
-    alac:theme "aura"
+    alac:theme "carbonfox"
     tmux:theme "dark"
-    ~/.config/shell/nvim/colorscheme.sh "mocha"
-    ~/.config/shell/git/delta-theme.sh "colibri"
+    ~/.config/shell/nvim/colorscheme.sh "carbonfox"
+    ~/.config/shell/git/delta-theme.sh "carbonfox"
     ~/.config/lazygit/theme.sh "dracula.dark"
 
     echo "================================================================================"
     echo "🌚 Switched to dark theme"
     echo "================================================================================"
   elif [[ "$THEME_MODE" == "light" ]]; then
-    alac:theme "catppuccin-latte"
+    alac:theme "dayfox"
     tmux:theme "light"
-    ~/.config/shell/nvim/colorscheme.sh "latte"
-    ~/.config/shell/git/delta-theme.sh "hoopoe"
+    ~/.config/shell/nvim/colorscheme.sh "dayfox"
+    ~/.config/shell/git/delta-theme.sh "dayfox"
     ~/.config/lazygit/theme.sh "light"
 
     echo "================================================================================"

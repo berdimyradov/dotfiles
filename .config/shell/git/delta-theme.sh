@@ -1,7 +1,25 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-THEME=$1
-CONFIG_PATH="$HOME/.config/git/delta/.gitconfig"
+INPUT="${1:-}"
 
-sed -i '' "s/^.*features = .*$/    features = $THEME/" "$CONFIG_PATH"
-echo "📟 Delta theme: $THEME"
+if [[ -z "$INPUT" ]]; then
+  echo "Usage: $0 <carbonfox|dayfox>"
+  exit 1
+fi
+
+case "$INPUT" in
+carbonfox)
+  ;;
+dayfox)
+  ;;
+*)
+  echo "Invalid theme: $INPUT"
+  echo "Expected: carbonfox or dayfox"
+  exit 1
+  ;;
+esac
+
+git config --global delta.features $INPUT
+
+echo "📟 Delta theme: $INPUT"

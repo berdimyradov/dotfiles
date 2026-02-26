@@ -3,20 +3,40 @@ return {
   -- { "ellisonleao/gruvbox.nvim" },
 
   -- add catppuccin
+  -- {
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   priority = 1000,
+  --   opts = {
+  --     flavour = "dayfox",
+  --   },
+  -- },
+
+  -- Add the nightfox plugin
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "EdenEast/nightfox.nvim",
+    lazy = false,
     priority = 1000,
-    opts = {
-      flavour = "latte",
-    },
+    config = function()
+      require("nightfox").setup({
+        options = {
+          transparent = false, -- Set to true if you want your terminal bg to show through
+          styles = {
+            comments = "italic",
+            keywords = "bold",
+            types = "italic,bold",
+          }
+        }
+      })
+    end,
   },
+
 
   -- Configure LazyVim to load preffered theme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "dayfox",
     },
   },
 }
