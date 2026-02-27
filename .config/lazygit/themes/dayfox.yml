@@ -1,0 +1,33 @@
+gui:
+  theme:
+    # Dayfox primary blue (sharp and deep)
+    activeBorderColor:
+      - "#2848a9"
+      - bold
+    # Dayfox subtle background-border (warm grey)
+    inactiveBorderColor:
+      - "#837a72"
+    # Secondary text color (Dayfox blue)
+    optionsTextColor:
+      - "#2848a9"
+    # Dayfox selection background
+    selectedLineBgColor:
+      - "#a4c1c2"
+    # Commit background (muted blue-grey)
+    cherryPickedCommitBgColor:
+      - "#d4cedd"
+    # Commit foreground (sharp blue)
+    cherryPickedCommitFgColor:
+      - "#2848a9"
+    # Dayfox "sharp" red for deletions/changes
+    unstagedChangesColor:
+      - "#e25e4f"
+    # Primary foreground text (Deep Dayfox purple/black)
+    defaultFgColor:
+      - "#3d2b5a"
+    # Searching/Active border (Dayfox orange)
+    searchingActiveBorderColor:
+      - "#da8548"
+
+  authorColors:
+    "*": "#398861" # Dayfox Green for authors

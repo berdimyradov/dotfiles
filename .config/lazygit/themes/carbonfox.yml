@@ -1,0 +1,27 @@
+gui:
+  theme:
+    activeBorderColor:
+      - "#BE95FF"
+      - bold
+    inactiveBorderColor:
+      - "#dfdfe0"
+
+    optionsTextColor:
+      - "#78a9ff"
+    selectedLineBgColor:
+      - "#525253"
+
+    cherryPickedCommitBgColor:
+      - "#393939"
+    cherryPickedCommitFgColor:
+      - "#78a9ff"
+
+    unstagedChangesColor:
+      - "#ee5396" # Carbonfox sharp pink/red
+    defaultFgColor:
+      - "#f2f4f8" # Crisp white/blue text
+    searchingActiveBorderColor:
+      - "#3ddbd9" # Cyan accent
+
+  authorColors:
+    "*": "#42be65" # Carbonfox Green

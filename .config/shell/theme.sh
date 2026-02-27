@@ -24,7 +24,7 @@ function theme() {
     tmux:theme "carbonfox"
     ~/.config/shell/nvim/colorscheme.sh "carbonfox"
     ~/.config/shell/git/delta-theme.sh "carbonfox"
-    ~/.config/lazygit/theme.sh "dracula.dark"
+    ~/.config/lazygit/theme.sh "carbonfox"
 
     echo "================================================================================"
     echo "🌚 Switched to dark theme"
@@ -34,7 +34,7 @@ function theme() {
     tmux:theme "dayfox"
     ~/.config/shell/nvim/colorscheme.sh "dayfox"
     ~/.config/shell/git/delta-theme.sh "dayfox"
-    ~/.config/lazygit/theme.sh "light"
+    ~/.config/lazygit/theme.sh "dayfox"
 
     echo "================================================================================"
     echo "🌝 Switched to light theme"
