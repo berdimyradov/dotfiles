@@ -3,28 +3,57 @@ set -euo pipefail
 
 INPUT="${1:-}"
 
+# ================================================================================
+# Theme detection
+# ================================================================================
+system_appereance() {
+  if defaults read -g AppleInterfaceStyle 2>/dev/null | grep -iq "Dark"; then
+    echo "dark"
+  else
+    echo "light"
+  fi
+}
+
+# No arg: infer from macOS appearance.
 if [[ -z "$INPUT" ]]; then
-  echo "Usage: $0 <light|dark>"
-  exit 1
+  SYSTEM_APPEARANCE="$(system_appereance)"
+
+  case "$SYSTEM_APPEARANCE" in
+  light)
+    INPUT="dayfox"
+    ;;
+  dark)
+    INPUT="carbonfox"
+    ;;
+  *)
+    echo "Invalid system appearance: $SYSTEM_APPEARANCE"
+    echo "Expected: light or dark"
+    exit 1
+    ;;
+  esac
 fi
 
 case "$INPUT" in
-light)
-  GRUVBOX_THEME="light256"
+carbonfox)
+  THEME_FILE="$HOME/.config/tmux/themes/nightfox/carbonfox.tmux"
   ;;
-dark)
-  GRUVBOX_THEME="dark256"
+dayfox)
+  THEME_FILE="$HOME/.config/tmux/themes/nightfox/dayfox.tmux"
   ;;
 *)
   echo "Invalid theme: $INPUT"
-  echo "Expected: light or dark"
+  echo "Expected: carbonfox or dayfox"
   exit 1
   ;;
 esac
 
-if pgrep -x tmux >/dev/null; then
-  tmux set -g @tmux-gruvbox "$GRUVBOX_THEME"
-  tmux source-file "$HOME/.config/tmux/tmux.conf"
+if [[ ! -f "$THEME_FILE" ]]; then
+  echo "Theme file not found: $THEME_FILE"
+  exit 1
 fi
 
-echo "🪟 Tmux gruvbox set to: $GRUVBOX_THEME"
+if pgrep -x tmux >/dev/null; then
+  tmux source-file "$THEME_FILE"
+fi
+
+echo "🪟 Tmux theme set to: $INPUT"

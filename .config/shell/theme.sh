@@ -21,7 +21,7 @@ function theme() {
 
   if [[ "$THEME_MODE" == "dark" ]]; then
     alac:theme "carbonfox"
-    tmux:theme "dark"
+    tmux:theme "carbonfox"
     ~/.config/shell/nvim/colorscheme.sh "carbonfox"
     ~/.config/shell/git/delta-theme.sh "carbonfox"
     ~/.config/lazygit/theme.sh "dracula.dark"
@@ -31,7 +31,7 @@ function theme() {
     echo "================================================================================"
   elif [[ "$THEME_MODE" == "light" ]]; then
     alac:theme "dayfox"
-    tmux:theme "light"
+    tmux:theme "dayfox"
     ~/.config/shell/nvim/colorscheme.sh "dayfox"
     ~/.config/shell/git/delta-theme.sh "dayfox"
     ~/.config/lazygit/theme.sh "light"
