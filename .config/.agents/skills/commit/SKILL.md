@@ -1,5 +1,5 @@
 ---
-name: commit-message-generator
+name: commit
 description: Generate a Conventional Commits message from staged Git changes using `git diff --staged`.
 license: MIT
 ---
