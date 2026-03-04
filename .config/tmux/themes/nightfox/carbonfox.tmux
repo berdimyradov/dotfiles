@@ -26,6 +26,6 @@ setw -g window-status-current-format "#[fg=#0c0c0c,bg=#b6b8bb,nobold,nounderscor
 # Override theme settings
 # ==========================
 set -g mode-style "fg=#0c0c0c,bg=#78a9ff"
-set -g status-left ""
-set -g status-right "#[fg=#b6b8bb,bg=#0c0c0c,nobold,nounderscore,noitalics]#[fg=#0c0c0c,bg=#b6b8bb,bold] #S "
-setw -g window-status-current-format "#[fg=#0c0c0c,bg=#78a9ff,nobold,nounderscore,noitalics]#[fg=#0c0c0c,bg=#78a9ff,bold] #I  #W #[fg=#78a9ff,bg=#0c0c0c,nobold,nounderscore,noitalics]"
+set -g status-left "#[fg=#0c0c0c,bg=#6e33ce,bold] #S #[fg=#6e33ce,bg=#0c0c0c,nobold,nounderscore,noitalics]"
+set -g status-right "#[fg=#78a9ff,bg=#0c0c0c,nobold,nounderscore,noitalics]#[fg=#0c0c0c,bg=#78a9ff,bold] #{b:pane_current_path} "
+setw -g window-status-current-format "#[fg=#0c0c0c,bg=#b6b8bb,nobold,nounderscore,noitalics]#[fg=#0c0c0c,bg=#b6b8bb,bold] #I  #W #[fg=#b6b8bb,bg=#0c0c0c,nobold,nounderscore,noitalics]"
