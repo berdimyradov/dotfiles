@@ -15,4 +15,4 @@ gui:
 
 os:
   editPreset: "nvim"
-  open: "agy {{filename}}"
+  open: "code {{filename}}"
