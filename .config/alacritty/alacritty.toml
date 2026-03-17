@@ -1,3 +1,5 @@
+# Config documentation: https://alacritty.org/config-alacritty.html
+
 live_config_reload = true
 
 import = [
@@ -5,15 +7,30 @@ import = [
 ]
 
 [window]
-opacity = 0.95
+# opacity = 0.95
+opacity = 1
+blur = true
 padding = { y = 0, x = 0 }
-dynamic_padding = false
-decorations = "None"
-startup_mode = "Maximized" # Options: Maximized | SimpleFullscreen | Windowed | Fullscreen
+dynamic_padding = true
+decorations = "None"        # "Full" | "None" | "Transparent" | "Buttonless"
+startup_mode = "Maximized"  # Options: Maximized | SimpleFullscreen | Windowed | Fullscreen
 
 [font]
-normal.family = "JetBrainsMono Nerd Font"
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 size = 14.5
+offset = { x = 0, y = 1 }
+
+[bell]
+animation = "Linear"      # "Ease" | "EaseOut" | "EaseOutSine" | "EaseOutQuad" | "EaseOutCubic" | "EaseOutQuart" | "EaseOutQuint" | "EaseOutExpo" | "EaseOutCirc" | "Linear"
+duration = 0
+# command = "None"
+command = { program = "afplay", args = ["/System/Library/Sounds/Ping.aiff"] }
+
+[selection]
+save_to_clipboard = true
 
 [keyboard]
 bindings = [
