@@ -27,6 +27,9 @@ alias config='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 # Custom Utilities
 # ────────────────────────────────────────────────────────────────────────────────
 
+alias bell='afplay /System/Library/Sounds/Ping.aiff'
+alias notify="osascript -e 'display notification \"Command has completed\" with title \"Notification\" sound name \"Ping\"'"
+
 # Prints: YYYY MonthName D HH:MM:SS
 alias now='date +"%Y %B %-d %H:%M:%S"'
 
