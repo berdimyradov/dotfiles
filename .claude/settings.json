@@ -1,13 +1,12 @@
 {
   "hooks": {
-    "PostToolUse": [
+    "PermissionRequest": [
       {
-        "matcher": "Edit|Write",
+        "matcher": "*",
         "hooks": [
           {
             "type": "command",
-            "command": "prettier --write",
-            "timeout": 5
+            "command": "afplay /System/Library/Sounds/Submarine.aiff"
           }
         ]
       }
