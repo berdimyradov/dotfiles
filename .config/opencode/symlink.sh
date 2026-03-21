@@ -1,1 +1,0 @@
-ln -sfn ~/.config/.agents/skills ~/.config/opencode/skills
