@@ -1,0 +1,46 @@
+# Taps
+tap "jesseduffield/lazydocker"
+tap "jesseduffield/lazynpm"
+
+# Core development
+brew "gh"
+brew "jq"
+brew "wget"
+brew "pnpm"
+brew "nvm"
+brew "watchman"
+# brew "overmind"
+
+# Mobile / iOS
+brew "cocoapods"
+brew "fastlane"
+brew "bundletool"
+
+# Database / cloud
+# brew "postgresql@18", link: true
+
+# Git / terminal workflow
+# brew "git-delta"
+# brew "git-lfs"
+brew "fzf"
+brew "tmux"
+# brew "zsh-syntax-highlighting"
+
+# Editors / file managers / terminal UX
+brew "neovim"
+# brew "vifm"
+# brew "yazi"
+# brew "bat"
+
+# Local servers / networking
+brew "http-server"
+brew "nmap"
+
+# Dev productivity tools
+brew "lazydocker"
+brew "lazygit"
+brew "lazysql"
+brew "jesseduffield/lazynpm/lazynpm"
+brew "opencode"
+# brew "television"
+# brew "worktrunk"
