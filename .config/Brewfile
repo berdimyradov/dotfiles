@@ -11,6 +11,10 @@ brew "nvm"
 brew "watchman"
 # brew "overmind"
 
+# Rust development
+brew "rust"
+brew "rust-analyzer"
+
 # Mobile / iOS
 brew "cocoapods"
 brew "fastlane"
