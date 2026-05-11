@@ -25,12 +25,11 @@ return {
             comments = "italic",
             keywords = "bold",
             types = "italic,bold",
-          }
-        }
+          },
+        },
       })
     end,
   },
-
 
   -- Configure LazyVim to load preffered theme
   {

@@ -9,6 +9,7 @@ return {
     opts = {
       options = {
         -- numbers = "both",
+        always_show_bufferline = true,
       },
     },
   },
