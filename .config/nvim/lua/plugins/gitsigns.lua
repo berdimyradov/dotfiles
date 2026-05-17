@@ -28,34 +28,74 @@ return {
   end,
 
   init = function()
+    -- see https://htmlcolorcodes.com/colors/shades-of-${color}/
+    local colors = {
+      red = {
+        default = "#FF0000",
+
+        maroon = "#800000",
+        pastel = "#FAA0A0",
+        venetian = "#A42A04",
+      },
+
+      orange = {
+        default = "#FFA500",
+
+        amber = "#FFBF00",
+        bright = "#FFAC1C",
+        neon = "#FF5F1F",
+        pastel = "#FAC898",
+      },
+
+      green = {
+        default = "#008000",
+
+        cadmium = "#097969",
+        celadon = "#AFE1AF",
+        forest = "#228B22",
+        pastel = "#C1E1C1",
+        seafoam = "#9FE2BF",
+        shamrock = "#009E60",
+      },
+
+      blue = {
+        default = "#0000FF",
+
+        denim = "#6F8FAF",
+        navy = "#000080",
+        neon = "#1F51FF",
+        pastel = "#A7C7E7",
+      },
+    }
+
     local palettes = {
       carbonfox = {
         unstaged = {
-          add = "#25BE6A",
-          change = "#F1C40F",
-          delete = "#FF5C57",
-          untracked = "#7AA2F7",
+          add = "#25be6a",
+          change = "#f1c40f",
+          delete = "#ff5c57",
+          untracked = "#7aa2f7",
         },
         staged = {
-          add = "#6A8F72",
-          change = "#9A8F5F",
-          delete = "#9A6666",
-          untracked = "#5F6F8F",
+          add = "#6a8f72",
+          change = "#9a8f5f",
+          delete = "#9a6666",
+          untracked = "#5f6f8f",
         },
       },
 
       dayfox = {
         unstaged = {
-          add = "#287A3E",
-          change = "#9A6700",
-          delete = "#B42318",
-          untracked = "#005A9C",
+          add = colors.green.forest,
+          change = colors.orange.neon,
+          delete = colors.red.venetian,
+          untracked = colors.blue.navy,
         },
         staged = {
-          add = "#5E7A64",
-          change = "#8A7840",
-          delete = "#8A5A5A",
-          untracked = "#5A6F8A",
+          add = colors.green.pastel,
+          change = colors.orange.pastel,
+          delete = colors.red.pastel,
+          untracked = colors.blue.pastel,
         },
       },
     }
