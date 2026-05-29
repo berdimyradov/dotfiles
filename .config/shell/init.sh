@@ -23,4 +23,10 @@ source ~/.config/shell/terminal.sh
 # Optional
 # source ~/.config/shell/docker.sh
 # source ~/.rcs/flutter.sh
-# source ~/.rcs/randy.sh
+
+## `randy` aliases
+alias randy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p randy-cli --'
+alias lazyrandy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p lazyrandy --'
+# `dev-randy`
+alias dev-randy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p randy-cli --'
+alias dev-lazyrandy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p lazyrandy --'
