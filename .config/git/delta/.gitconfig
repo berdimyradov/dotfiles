@@ -2,10 +2,10 @@
   diffFilter = delta --color-only
 
 [include]
-    path = ./themes.gitconfig
+  path = ./themes.gitconfig
 
 [delta]
-    features = carbonfox
-    navigate = true    # use n and N to move between diff sections
-    line-numbers = true
-    side-by-side = true
+  features = dayfox
+  navigate = true    # use n and N to move between diff sections
+  line-numbers = true
+  side-by-side = true

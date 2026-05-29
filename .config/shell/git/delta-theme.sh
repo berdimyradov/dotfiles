@@ -9,10 +9,8 @@ if [[ -z "$INPUT" ]]; then
 fi
 
 case "$INPUT" in
-carbonfox)
-  ;;
-dayfox)
-  ;;
+carbonfox) ;;
+dayfox) ;;
 *)
   echo "Invalid theme: $INPUT"
   echo "Expected: carbonfox or dayfox"
@@ -20,6 +18,7 @@ dayfox)
   ;;
 esac
 
-git config --global delta.features $INPUT
+DELTA_CONFIG="$HOME/.config/git/delta/.gitconfig"
+git config --file "$DELTA_CONFIG" delta.features "$INPUT"
 
 echo "📟 Delta theme: $INPUT"
