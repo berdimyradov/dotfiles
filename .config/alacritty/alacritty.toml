@@ -8,8 +8,8 @@ import = [
 
 [window]
 # opacity = 0.95
-opacity = 1
-blur = true
+opacity = 1.0
+blur = false
 padding = { y = 0, x = 0 }
 dynamic_padding = true
 decorations = "None"        # "Full" | "None" | "Transparent" | "Buttonless"
