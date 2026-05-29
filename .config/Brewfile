@@ -32,8 +32,8 @@ brew "tmux"
 
 # Editors / file managers / terminal UX
 brew "neovim"
+brew "yazi"
 # brew "vifm"
-# brew "yazi"
 # brew "bat"
 
 # Local servers / networking
@@ -41,10 +41,12 @@ brew "http-server"
 brew "nmap"
 
 # Dev productivity tools
-brew "lazydocker"
 brew "lazygit"
-brew "lazysql"
-brew "jesseduffield/lazynpm/lazynpm"
-brew "opencode"
+# brew "lazydocker"
+# brew "lazysql"
+# brew "jesseduffield/lazynpm/lazynpm"
 # brew "television"
 # brew "worktrunk"
+
+# AI CLI assistants
+brew "opencode"
