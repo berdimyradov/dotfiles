@@ -28,6 +28,7 @@ brew "bundletool"
 # brew "git-lfs"
 brew "fzf"
 brew "tmux"
+brew "zoxide"
 # brew "zsh-syntax-highlighting"
 
 # Editors / file managers / terminal UX
