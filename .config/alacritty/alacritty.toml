@@ -33,6 +33,9 @@ save_to_clipboard = true
 
 [keyboard]
 bindings = [
+  # Toggle Vi Mode
+  { key = "Escape", mods = "Control", action = "ToggleViMode" },
+
   # Toggle fullscreen
   { key = "Return", mods = "Command", action = "ToggleSimpleFullscreen" },
 
