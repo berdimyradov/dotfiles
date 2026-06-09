@@ -1,0 +1,49 @@
+# ---------------------------------------------------------
+# Typography
+# ---------------------------------------------------------
+font-family = "JetBrains Mono Nerd Font"
+font-size = 16
+font-thicken = true
+adjust-cell-height = 1
+
+# ---------------------------------------------------------
+# Theme and Window Aesthetics
+# ---------------------------------------------------------
+theme = light:Dayfox,dark:Carbonfox
+background-opacity = 0.90
+background-blur = true
+
+# macOS styling (ignored on Linux)
+macos-titlebar-style = hidden
+
+# ---------------------------------------------------------
+# Window Behavior
+# ---------------------------------------------------------
+# window-width = 110
+# window-height = 30
+# window-padding-x = 0
+# window-padding-y = 0
+# window-padding-balance = true
+maximize = true
+# Strips the title bar and rounds down corner radiuses completely
+window-decoration = false
+
+
+# ---------------------------------------------------------
+# Mouse and Cursor
+# ---------------------------------------------------------
+# cursor-style = block
+# cursor-blink = true
+# mouse-hide-while-typing = true
+
+# ---------------------------------------------------------
+# Custom Keybindings
+# ---------------------------------------------------------
+# Clear terminal with Command+K (macOS) or Ctrl+K (Linux)
+# keybind = cmd+k=clear_screen
+# keybind = ctrl+k=clear_screen
+
+# Quick split navigation
+# keybind = alt+left=goto_split:left
+# keybind = alt+right=goto_split:right
+
