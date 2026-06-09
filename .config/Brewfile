@@ -1,53 +1,58 @@
 # Taps
-tap "jesseduffield/lazydocker"
-tap "jesseduffield/lazynpm"
+# tap "jesseduffield/lazydocker"
+# tap "jesseduffield/lazynpm"
 
-# Core development
-brew "gh"
-brew "jq"
-brew "wget"
-brew "pnpm"
-brew "nvm"
-brew "watchman"
-# brew "overmind"
-
-# Rust development
-brew "rust"
-brew "rust-analyzer"
-
-# Mobile / iOS
-brew "cocoapods"
-brew "fastlane"
-brew "bundletool"
-
-# Database / cloud
-# brew "postgresql@18", link: true
-
-# Git / terminal workflow
-# brew "git-delta"
-# brew "git-lfs"
+# Shell / terminal workflow
 brew "fzf"
 brew "tmux"
 brew "zoxide"
 # brew "zsh-syntax-highlighting"
 
-# Editors / file managers / terminal UX
+# Core CLI utilities
+brew "jq"
+brew "wget"
+brew "poppler"
+brew "nmap"
+
+# Git / GitHub
+brew "gh"
+brew "lazygit"
+# brew "git-delta"
+# brew "git-lfs"
+
+# Editors / file managers
 brew "neovim"
 brew "yazi"
 # brew "vifm"
 # brew "bat"
 
-# Local servers / networking
+# JavaScript / Node
+brew "pnpm"
+brew "nvm"
+brew "watchman"
 brew "http-server"
-brew "nmap"
-
-# Dev productivity tools
-brew "lazygit"
-# brew "lazydocker"
-# brew "lazysql"
 # brew "jesseduffield/lazynpm/lazynpm"
+
+# Rust
+brew "rust"
+brew "rust-analyzer"
+
+# Mobile / iOS / Android
+brew "cocoapods"
+brew "fastlane"
+brew "bundletool"
+
+# Databases / backend services
+# brew "postgresql@18", link: true
+# brew "lazysql"
+
+# Containers / process orchestration
+# brew "lazydocker"
+# brew "overmind"
+
+# AI assistants
+brew "opencode"
+
+# Experiments / maybe later
 # brew "television"
 # brew "worktrunk"
-
-# AI CLI assistants
-brew "opencode"
