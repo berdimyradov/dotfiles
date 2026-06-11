@@ -10,7 +10,7 @@ adjust-cell-height = 1
 # Theme and Window Aesthetics
 # ---------------------------------------------------------
 theme = light:Dayfox,dark:Carbonfox
-background-opacity = 0.90
+background-opacity = 1
 background-blur = true
 
 # macOS styling (ignored on Linux)
@@ -21,13 +21,14 @@ macos-titlebar-style = hidden
 # ---------------------------------------------------------
 # window-width = 110
 # window-height = 30
-# window-padding-x = 0
-# window-padding-y = 0
-# window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+window-padding-color = background
+# window-step-resize = true
 maximize = true
 # Strips the title bar and rounds down corner radiuses completely
 window-decoration = false
-
 
 # ---------------------------------------------------------
 # Mouse and Cursor
