@@ -18,7 +18,7 @@ dayfox) ;;
   ;;
 esac
 
-DELTA_CONFIG="$HOME/.config/git/delta/.gitconfig"
+DELTA_CONFIG="$HOME/.config/git/delta/active-theme.gitconfig"
 git config --file "$DELTA_CONFIG" delta.features "$INPUT"
 
 echo "📟 Delta theme: $INPUT"

@@ -3,9 +3,9 @@
 
 [include]
   path = ./themes.gitconfig
+  path = ./active-theme.gitconfig
 
 [delta]
-  features = dayfox
   navigate = true    # use n and N to move between diff sections
   line-numbers = true
   side-by-side = true
