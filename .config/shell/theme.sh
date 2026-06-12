@@ -1,54 +1,27 @@
-# ================================================================================
-# Theme detection
-# ================================================================================
-function system_appereance() {
-  if defaults read -g AppleInterfaceStyle 2>/dev/null | grep -iq "Dark"; then
-    echo "dark"
-  else
-    echo "light"
-  fi
-}
-
-# ================================================================================
-# Theme switching functions
-# ================================================================================
-function theme() {
-  THEME_MODE="$1"
-
-  if [ -z "$THEME_MODE" ]; then
-    THEME_MODE="$(system_appereance)"
-  fi
-
-  if [[ "$THEME_MODE" == "dark" ]]; then
-    alac:theme "carbonfox"
-    tmux:theme "carbonfox"
-    ~/.config/shell/nvim/colorscheme.sh "carbonfox"
-    ~/.config/shell/git/delta-theme.sh "carbonfox"
-    ~/.config/lazygit/theme.sh "carbonfox"
-
-    echo "================================================================================"
-    echo "🌚 Switched to dark theme"
-    echo "================================================================================"
-  elif [[ "$THEME_MODE" == "light" ]]; then
-    alac:theme "dayfox"
-    tmux:theme "dayfox"
-    ~/.config/shell/nvim/colorscheme.sh "dayfox"
-    ~/.config/shell/git/delta-theme.sh "dayfox"
-    ~/.config/lazygit/theme.sh "dayfox"
-
-    echo "================================================================================"
-    echo "🌝 Switched to light theme"
-    echo "================================================================================"
-  else
-    echo "Usage: theme [dark|light]"
-    return
-  fi
-}
-
 function dark() {
-  theme "dark"
+  osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'
+
+  # alac:theme "carbonfox"
+  tmux:theme "carbonfox"
+  ~/.config/shell/nvim/colorscheme.sh "carbonfox"
+  ~/.config/shell/git/delta-theme.sh "carbonfox"
+  ~/.config/lazygit/theme.sh "carbonfox"
+
+  echo "================================================================================"
+  echo "🌚 Switched to dark theme"
+  echo "================================================================================"
 }
 
 function light() {
-  theme "light"
+  osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to false'
+
+  # alac:theme "dayfox"
+  tmux:theme "dayfox"
+  ~/.config/shell/nvim/colorscheme.sh "dayfox"
+  ~/.config/shell/git/delta-theme.sh "dayfox"
+  ~/.config/lazygit/theme.sh "dayfox"
+
+  echo "================================================================================"
+  echo "🌝 Switched to light theme"
+  echo "================================================================================"
 }

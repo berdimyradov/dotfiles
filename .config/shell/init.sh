@@ -17,7 +17,8 @@ source ~/.config/lazygit/init.sh
 source ~/.config/tmux/init.sh
 
 # Terminal
-source ~/.config/alacritty/init.sh
+# source ~/.config/alacritty/init.sh
+source ~/.config/ghostty/init.sh
 source ~/.config/shell/terminal.sh
 
 # Optional
