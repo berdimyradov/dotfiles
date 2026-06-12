@@ -1,3 +1,17 @@
+local function active_colorscheme()
+  local file = vim.fn.expand("~/.config/nvim/active-colorscheme")
+
+  if vim.fn.filereadable(file) == 1 then
+    local theme = vim.fn.trim(vim.fn.readfile(file)[1] or "")
+
+    if theme == "carbonfox" or theme == "dayfox" then
+      return theme
+    end
+  end
+
+  return "carbonfox"
+end
+
 return {
   -- Add the nightfox plugin
   {
@@ -20,7 +34,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dayfox",
+      colorscheme = active_colorscheme(),
     },
   },
 }
