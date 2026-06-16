@@ -3,6 +3,7 @@
 # tap "jesseduffield/lazynpm"
 
 # Shell / terminal workflow
+brew "btop"
 brew "fzf"
 brew "tmux"
 brew "zoxide"
