@@ -15,6 +15,6 @@ if [ "$FLAVOUR" != "carbonfox" ] && [ "$FLAVOUR" != "dayfox" ]; then
   exit 1
 fi
 
-printf "%s\n" "$FLAVOUR" > "$FILE"
+printf "%s\n" "$FLAVOUR" >"$FILE"
 
 echo "🪶 Nvim colorscheme set to: $FLAVOUR"

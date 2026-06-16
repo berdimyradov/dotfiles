@@ -4,3 +4,5 @@
 
 -- TESTING Font size setting
 -- vim.o.guifont = "JetBrainsMono Nerd Font:h18"
+
+vim.opt.autoread = true

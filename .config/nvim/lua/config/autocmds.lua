@@ -2,6 +2,19 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
+-- Automatically check if files changed on disk and reload them
+local function reload_changed_buffer()
+  if vim.fn.mode() ~= "c" and vim.fn.bufexists(vim.fn.bufnr()) == 1 then
+    vim.cmd("checktime")
+  end
+end
+
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  group = vim.api.nvim_create_augroup("AutoReloadBuffer", { clear = true }),
+  pattern = "*",
+  callback = reload_changed_buffer,
+})
+
 -- Update colorscheme from active theme file
 local active_colorscheme_file = vim.fn.expand("~/.config/nvim/active-colorscheme")
 
