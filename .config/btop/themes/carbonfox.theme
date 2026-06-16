@@ -1,0 +1,87 @@
+# Carbonfox - dark theme for btop
+# Based on nightfox.nvim carbonfox palette
+# Source: https://github.com/EdenEast/nightfox.nvim/blob/main/lua/nightfox/palette/carbonfox.lua
+
+# Main background, empty for terminal default
+theme[main_bg]="#161616"
+
+# Main text color
+theme[main_fg]="#f2f4f8"
+
+# Title color for boxes
+theme[title]="#f2f4f8"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#78a9ff"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#2a2a2a"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#78a9ff"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#7b7c7e"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#b6b8bb"
+
+# Background color of the percentage meters
+theme[meter_bg]="#353535"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#b6b8bb"
+
+# CPU, Memory, Network, Proc box outline colors
+theme[cpu_box]="#33b1ff"
+theme[mem_box]="#25be6a"
+theme[net_box]="#08bdba"
+theme[proc_box]="#78a9ff"
+
+# Box divider line and small boxes line color
+theme[div_line]="#535353"
+
+# Temperature graph color
+theme[temp_start]="#25be6a"
+theme[temp_mid]="#08bdba"
+theme[temp_end]="#ee5396"
+
+# CPU graph colors
+theme[cpu_start]="#33b1ff"
+theme[cpu_mid]="#78a9ff"
+theme[cpu_end]="#be95ff"
+
+# Mem/Disk free meter
+theme[free_start]="#be95ff"
+theme[free_mid]="#9b9fff"
+theme[free_end]="#33b1ff"
+
+# Mem/Disk cached meter
+theme[cached_start]="#78a9ff"
+theme[cached_mid]="#33b1ff"
+theme[cached_end]="#be95ff"
+
+# Mem/Disk available meter
+theme[available_start]="#08bdba"
+theme[available_mid]="#3ddbd9"
+theme[available_end]="#ee5396"
+
+# Mem/Disk used meter
+theme[used_start]="#25be6a"
+theme[used_mid]="#33b1ff"
+theme[used_end]="#78a9ff"
+
+# Download graph colors
+theme[download_start]="#08bdba"
+theme[download_mid]="#3ddbd9"
+theme[download_end]="#ee5396"
+
+# Upload graph colors
+theme[upload_start]="#25be6a"
+theme[upload_mid]="#33b1ff"
+theme[upload_end]="#78a9ff"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#33b1ff"
+theme[process_mid]="#78a9ff"
+theme[process_end]="#be95ff"
