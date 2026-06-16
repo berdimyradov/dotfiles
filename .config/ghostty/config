@@ -48,3 +48,7 @@ window-decoration = false
 # keybind = alt+left=goto_split:left
 # keybind = alt+right=goto_split:right
 
+# ---------------------------------------------------------
+# Key tables
+# ---------------------------------------------------------
+config-file = key_tables/vim.conf
