@@ -1,0 +1,71 @@
+-- NOTE:
+-- LazyVim/lazy.nvim can load plugin spec files with hyphens, so it may work.
+-- But in Lua, hyphenated module names are awkward if you ever need to manually require them
+-- require("plugins.ai-completion")
+
+return {
+  -- {
+  --   "milanglacier/minuet-ai.nvim",
+  --   opts = {
+  --     provider = "openai_compatible",
+  --     context_window = 2000,
+  --     request_timeout = 5,
+  --     throttle = 500,
+  --     debounce = 250,
+  --
+  --     provider_options = {
+  --       openai_compatible = {
+  --         name = "LM Studio",
+  --         end_point = "http://localhost:1234/v1/chat/completions",
+  --         api_key = function()
+  --           return "lm-studio"
+  --         end,
+  --         model = "qwen2.5-coder-7b-instruct-mlx",
+  --         stream = true,
+  --         optional = {
+  --           temperature = 0.1,
+  --           max_tokens = 128,
+  --           top_p = 0.9,
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
+  --
+  -- {
+  --   "saghen/blink.cmp",
+  --   optional = true,
+  --   opts = function(_, opts)
+  --     opts.keymap = opts.keymap or {}
+  --     opts.keymap["<A-y>"] = {
+  --       function(cmp)
+  --         cmp.show({ providers = { "minuet" } })
+  --       end,
+  --     }
+  --
+  --     opts.sources = opts.sources or {}
+  --     opts.sources.default = opts.sources.default or { "lsp", "path", "snippets", "buffer" }
+  --
+  --     if not vim.tbl_contains(opts.sources.default, "minuet") then
+  --       table.insert(opts.sources.default, "minuet")
+  --     end
+  --
+  --     opts.sources.providers = opts.sources.providers or {}
+  --     opts.sources.providers.minuet = {
+  --       name = "minuet",
+  --       module = "minuet.blink",
+  --       async = true,
+  --       timeout_ms = 5000,
+  --       score_offset = 50,
+  --     }
+  --
+  --     opts.completion = opts.completion or {}
+  --     opts.completion.trigger = opts.completion.trigger or {}
+  --     opts.completion.trigger.prefetch_on_insert = false
+  --
+  --     -- OPTIONAL: If you want to disable blink's general auto-popup menu entirely
+  --     -- and only show it when you press a keymap, uncomment the line below:
+  --     -- opts.completion = { menu = { auto_show = false } }
+  --   end,
+  -- },
+}
