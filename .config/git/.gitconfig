@@ -152,10 +152,10 @@
 	autocrlf = input
 	excludesfile = /.gitignore_global
 	editor = /usr/bin/vim
-  pager = delta
+  pager = hunk pager
 
 [include]
-  path = ~/.config/git/delta/.gitconfig
+  ; path = ~/.config/git/delta/.gitconfig
 
 [merge]
     conflictstyle = diff3

@@ -4,7 +4,7 @@ function dark() {
   # alac:theme "carbonfox"
   tmux:theme "carbonfox"
   ~/.config/shell/nvim/colorscheme.sh "carbonfox"
-  ~/.config/shell/git/delta-theme.sh "carbonfox"
+  # ~/.config/shell/git/delta-theme.sh "carbonfox"
   ~/.config/lazygit/theme.sh "carbonfox"
   ~/.config/btop/theme.sh "carbonfox"
 
@@ -19,7 +19,7 @@ function light() {
   # alac:theme "dayfox"
   tmux:theme "dayfox"
   ~/.config/shell/nvim/colorscheme.sh "dayfox"
-  ~/.config/shell/git/delta-theme.sh "dayfox"
+  # ~/.config/shell/git/delta-theme.sh "dayfox"
   ~/.config/lazygit/theme.sh "dayfox"
   ~/.config/btop/theme.sh "dayfox"
 

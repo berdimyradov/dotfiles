@@ -1,0 +1,9 @@
+theme = "catppuccin-latte" # any built-in theme id, auto, or custom
+mode = "split"        # auto, split, stack
+vcs = "git"          # git, jj, sl
+watch = false
+exclude_untracked = false
+line_numbers = true
+wrap_lines = false
+agent_notes = false
+transparent_background = false
