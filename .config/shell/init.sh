@@ -14,7 +14,6 @@ source ~/.config/shell/theme/init.sh
 
 # TUI
 source ~/.config/lazygit/init.sh
-source ~/.config/tmux/init.sh
 
 # Terminal
 # source ~/.config/alacritty/init.sh

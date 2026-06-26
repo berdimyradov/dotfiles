@@ -26,7 +26,7 @@ theme:nvim() {
   file="$HOME/.config/nvim/active-colorscheme"
 
   printf "%s\n" "$colorscheme" >"$file"
-  echo "Nvim theme: $colorscheme"
+  echo "🪶 Nvim theme: $colorscheme"
 }
 
 theme:_nvim_main() {

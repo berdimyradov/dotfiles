@@ -46,7 +46,7 @@ theme:btop() {
     printf '\ncolor_theme = "active"\n' >>"$config_file"
   fi
 
-  echo "btop theme: $flavor"
+  echo "📊 btop theme: $flavor"
 }
 
 theme:_btop_main() {

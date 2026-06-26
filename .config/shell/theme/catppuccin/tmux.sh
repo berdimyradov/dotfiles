@@ -78,7 +78,7 @@ theme:tmux() {
     tmux source-file "$plugin_dir/catppuccin_tmux.conf"
   fi
 
-  echo "tmux theme: $flavor"
+  echo "🪟 tmux theme: $flavor"
 }
 
 theme:_tmux_main() {

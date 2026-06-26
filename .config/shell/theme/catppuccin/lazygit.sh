@@ -22,7 +22,7 @@ theme:lazygit() {
     return 1
   }
 
-  accent="yellow"
+  accent="blue"
   lg_dir="$HOME/.config/lazygit"
   themes_dir="$lg_dir/themes"
   active_theme="$lg_dir/active_theme.yml"
@@ -34,7 +34,7 @@ theme:lazygit() {
   fi
 
   ln -sf "$theme_file" "$active_theme"
-  echo "LazyGit theme: catppuccin/$flavor/$accent"
+  echo "🔀 LazyGit theme: catppuccin/$flavor/$accent"
 }
 
 theme:_lazygit_main() {

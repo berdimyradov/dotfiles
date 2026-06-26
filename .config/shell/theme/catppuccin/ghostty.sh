@@ -39,7 +39,7 @@ theme:ghostty() {
     printf 'theme = %s\n' "$theme" >"$active"
   fi
 
-  echo "Ghostty theme: $theme"
+  echo "👻 Ghostty theme: $theme"
 }
 
 theme:_ghostty_main() {

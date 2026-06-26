@@ -25,7 +25,7 @@ theme:git-delta() {
   delta_config="$HOME/.config/git/delta/active-theme.gitconfig"
   git config --file "$delta_config" delta.features "$flavor"
 
-  echo "Delta theme: $flavor"
+  echo "📟 Delta theme: $flavor"
 }
 
 theme:_git_delta_main() {
