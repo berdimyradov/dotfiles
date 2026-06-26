@@ -25,7 +25,7 @@ local function active_colorscheme()
 
   local theme = vim.fn.trim(vim.fn.readfile(active_colorscheme_file)[1] or "")
 
-  if theme == "carbonfox" or theme == "dayfox" then
+  if theme == "catppuccin-latte" or theme == "catppuccin-mocha" then
     return theme
   end
 

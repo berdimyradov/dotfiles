@@ -69,21 +69,38 @@ return {
     }
 
     local palettes = {
-      carbonfox = {
+      ["catppuccin-mocha"] = {
         unstaged = {
-          add = "#25be6a",
-          change = "#f1c40f",
-          delete = "#ff5c57",
-          untracked = "#7aa2f7",
+          add = "#a6e3a1",
+          change = "#f9e2af",
+          delete = "#f38ba8",
+          untracked = "#89b4fa",
         },
         staged = {
-          add = "#6a8f72",
-          change = "#9a8f5f",
-          delete = "#9a6666",
-          untracked = "#5f6f8f",
+          add = "#74c7ec",
+          change = "#fab387",
+          delete = "#eba0ac",
+          untracked = "#b4befe",
         },
       },
 
+      ["catppuccin-latte"] = {
+        unstaged = {
+          add = "#40a02b",
+          change = "#df8e1d",
+          delete = "#d20f39",
+          untracked = "#1e66f5",
+        },
+        staged = {
+          add = "#179299",
+          change = "#fe640b",
+          delete = "#e64553",
+          untracked = "#7287fd",
+        },
+      },
+
+      -- Kept for future manual Nightfox use. These are not part of the
+      -- current shell theme switching path.
       dayfox = {
         unstaged = {
           add = colors.green.forest,
@@ -98,21 +115,32 @@ return {
           untracked = colors.blue.pastel,
         },
       },
+
+      carbonfox = {
+        unstaged = {
+          add = "#25be6a",
+          change = "#f1c40f",
+          delete = "#ff5c57",
+          untracked = "#7aa2f7",
+        },
+        staged = {
+          add = "#6a8f72",
+          change = "#9a8f5f",
+          delete = "#9a6666",
+          untracked = "#5f6f8f",
+        },
+      },
     }
 
     local function get_palette()
       local colorscheme = vim.g.colors_name or ""
 
-      if colorscheme == "dayfox" then
-        return palettes.dayfox
-      end
-
-      if colorscheme == "carbonfox" then
-        return palettes.carbonfox
+      if palettes[colorscheme] then
+        return palettes[colorscheme]
       end
 
       -- fallback for other themes
-      return palettes.carbonfox
+      return palettes["catppuccin-mocha"]
     end
 
     local function set_gitsigns_hl()

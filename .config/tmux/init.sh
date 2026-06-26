@@ -1,1 +1,0 @@
-alias tmux:theme="$HOME/.config/tmux/themes/theme.sh"

@@ -4,33 +4,32 @@ local function active_colorscheme()
   if vim.fn.filereadable(file) == 1 then
     local theme = vim.fn.trim(vim.fn.readfile(file)[1] or "")
 
-    if theme == "carbonfox" or theme == "dayfox" then
+    if theme == "catppuccin-latte" or theme == "catppuccin-mocha" then
       return theme
     end
   end
 
-  return "carbonfox"
+  return "catppuccin-mocha"
 end
 
 return {
-  -- Add the nightfox plugin
+  -- Add the Catppuccin plugin
   {
-    "EdenEast/nightfox.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
     opts = {
-      options = {
-        transparent = false,
-        styles = {
-          comments = "italic",
-          keywords = "bold",
-          types = "italic,bold",
-        },
+      transparent_background = false,
+      styles = {
+        comments = { "italic" },
+        keywords = { "bold" },
+        types = { "italic", "bold" },
       },
     },
   },
 
-  -- Configure LazyVim to load preffered theme
+  -- Configure LazyVim to load preferred theme
   {
     "LazyVim/LazyVim",
     opts = {

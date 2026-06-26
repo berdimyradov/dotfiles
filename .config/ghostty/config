@@ -9,7 +9,9 @@ adjust-cell-height = 1
 # ---------------------------------------------------------
 # Theme and Window Aesthetics
 # ---------------------------------------------------------
-theme = light:Dayfox,dark:Carbonfox
+# theme = light:Dayfox,dark:Carbonfox
+config-file = active_theme
+
 background-opacity = 1
 background-blur = true
 
