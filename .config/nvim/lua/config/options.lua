@@ -14,6 +14,7 @@ vim.opt.sessionoptions = {
   "buffers",
   "curdir",
   "folds",
+  "globals",
   "help",
   "tabpages",
   "winsize",

@@ -7,22 +7,23 @@ return {
   },
 
   {
-    "sindrets/diffview.nvim",
+    -- Maintained fork. Unlike the archived original, this preserves the
+    -- file-tree's collapsed state when staging refreshes the panel.
+    "dlyongemallo/diffview.nvim",
     cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles", "DiffviewFileHistory" },
-
-    -- dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
-      enhanced_diff_hl = true, -- Better diff highlighting
-
-      -- Enables filetype icons in the Diffview panels (requires `nvim-web-devicons` or `mini.icons`)
+      enhanced_diff_hl = true,
       use_icons = true,
     },
-
     keys = {
-      -- Simple toggle logic: closes if open, opens if closed
       {
         "<leader>gd",
         function()
+          -- Force lazy.nvim to properly load the plugin and apply 'opts' if not yet loaded
+          if not package.loaded["diffview"] then
+            require("lazy").load({ plugins = { "diffview.nvim" } })
+          end
+
           local lib = require("diffview.lib")
           local view = lib.get_current_view()
 
@@ -34,7 +35,6 @@ return {
         end,
         desc = "Toggle Diffview",
       },
-
       { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", desc = "Current File History" },
       { "<leader>gH", "<cmd>DiffviewFileHistory<cr>", desc = "Branch History" },
     },
