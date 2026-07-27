@@ -7,6 +7,26 @@ return {
 
         mappings = {
           ["z"] = "none",
+          -- TODO: Consider dedicated position mappings:
+          -- <leader>pf = float, <leader>pr = right, <leader>pl = left.
+          ["<leader>p"] = {
+            function(state)
+              local command = require("neo-tree.command")
+              local position = state.current_position == "float" and "left" or "float"
+
+              command.execute({
+                action = "close",
+                source = state.name,
+              })
+
+              command.execute({
+                action = "focus",
+                source = state.name,
+                position = position,
+              })
+            end,
+            desc = "Toggle float/left position",
+          },
         },
 
         position = "float",
