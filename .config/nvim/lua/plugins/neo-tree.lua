@@ -29,7 +29,7 @@ return {
           },
         },
 
-        position = "float",
+        position = "left",
         popup = {
           position = { row = "50%", col = "0%" },
           size = { height = "93%", width = "30%" },
@@ -37,6 +37,7 @@ return {
       },
       filesystem = {
         filtered_items = {
+          visible = true,
           never_show = {
             ".DS_Store",
             ".git",
