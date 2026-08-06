@@ -7,6 +7,8 @@ return {
 
         mappings = {
           ["z"] = "none",
+          ["zM"] = "close_all_nodes",
+          ["zR"] = "expand_all_nodes",
           -- TODO: Consider dedicated position mappings:
           -- <leader>pf = float, <leader>pr = right, <leader>pl = left.
           ["<leader>p"] = {
