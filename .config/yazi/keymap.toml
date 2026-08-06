@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = "E"
+run  = '''shell --block -- printf 'Eject %%s? [y/N] ' %h; read answer; [[ $answer == [yY] ]] && diskutil eject %h'''
+desc = "Eject the hovered volume via diskutil"
