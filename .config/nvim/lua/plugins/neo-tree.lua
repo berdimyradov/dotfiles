@@ -29,8 +29,28 @@ return {
             end,
             desc = "Toggle float/left position",
           },
-        },
+          ["c"] = "copy_to_clipboard",
+          ["y"] = {
+            function(state)
+              local node = state.tree:get_node()
+              local filename = vim.fn.fnamemodify(node.path, ":t")
 
+              vim.fn.setreg("+", filename)
+              vim.notify("Copied filename: " .. filename)
+            end,
+            desc = "Copy filename",
+          },
+          ["Y"] = {
+            function(state)
+              local node = state.tree:get_node()
+              local path = vim.fn.fnamemodify(node.path, ":p")
+
+              vim.fn.setreg("+", path)
+              vim.notify("Copied full path: " .. path)
+            end,
+            desc = "Copy full path",
+          },
+        },
         position = "left",
         popup = {
           position = { row = "50%", col = "0%" },
