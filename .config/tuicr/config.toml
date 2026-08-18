@@ -1,0 +1,2 @@
+theme = "catppuccin-latte"
+diff_view = "unified"   # "side-by-side" or "unified"
