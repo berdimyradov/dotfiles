@@ -1,3 +1,13 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+
+-- Open terminal in a vertical split on the right side
+-- vim.keymap.set("n", "<leader>tr", function()
+--   Snacks.terminal(nil, {
+--     win = {
+--       position = "right",
+--       width = 0.4, -- Adjust this decimal to change width (40% of screen)
+--     },
+--   })
+-- end, { desc = "Terminal (Right Split)" })

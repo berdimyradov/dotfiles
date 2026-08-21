@@ -21,3 +21,6 @@ vim.opt.sessionoptions = {
   "terminal",
   "localoptions",
 }
+
+-- Options are: "snacks", "fzf", or "telescope"
+-- vim.g.lazyvim_picker = "snacks"
