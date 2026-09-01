@@ -15,32 +15,18 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
   callback = reload_changed_buffer,
 })
 
--- Update colorscheme from active theme file
-local active_colorscheme_file = vim.fn.expand("~/.config/nvim/active-colorscheme")
-
-local function active_colorscheme()
-  if vim.fn.filereadable(active_colorscheme_file) ~= 1 then
-    return nil
-  end
-
-  local theme = vim.fn.trim(vim.fn.readfile(active_colorscheme_file)[1] or "")
-
-  if theme == "catppuccin-latte" or theme == "catppuccin-mocha" then
-    return theme
-  end
-
-  return nil
-end
-
-local function apply_active_colorscheme()
-  local theme = active_colorscheme()
-
-  if theme and vim.g.colors_name ~= theme then
-    vim.cmd.colorscheme(theme)
-  end
-end
-
-vim.api.nvim_create_autocmd({ "FocusGained", "CursorHold", "CursorHoldI" }, {
-  group = vim.api.nvim_create_augroup("ActiveColorscheme", { clear = true }),
-  callback = apply_active_colorscheme,
-})
+-- Retain Catppuccin's CursorLine background while making the active Neo-tree row bold.
+-- local function apply_neotree_cursorline()
+--   local cursorline = vim.api.nvim_get_hl(0, { name = "CursorLine", link = false })
+--   vim.api.nvim_set_hl(0, "NeoTreeCursorLine", {
+--     bg = cursorline.bg,
+--     bold = true,
+--   })
+-- end
+--
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   group = vim.api.nvim_create_augroup("NeoTreeCursorLine", { clear = true }),
+--   callback = apply_neotree_cursorline,
+-- })
+--
+-- apply_neotree_cursorline()

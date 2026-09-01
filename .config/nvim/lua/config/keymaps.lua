@@ -2,12 +2,14 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Open terminal in a vertical split on the right side
--- vim.keymap.set("n", "<leader>tr", function()
---   Snacks.terminal(nil, {
---     win = {
---       position = "right",
---       width = 0.4, -- Adjust this decimal to change width (40% of screen)
---     },
---   })
--- end, { desc = "Terminal (Right Split)" })
+-- Open Yazi in a floating terminal rooted at the current file's directory.
+vim.keymap.set("n", "<leader>y", function()
+  Snacks.terminal("yazi", {
+    cwd = vim.fn.expand("%:p:h"),
+    win = {
+      position = "float",
+      relative = "editor",
+      border = "none",
+    },
+  })
+end, { desc = "Open Yazi in a floating terminal" })

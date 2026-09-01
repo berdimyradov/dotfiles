@@ -14,6 +14,25 @@ return {
     opts = {
       enhanced_diff_hl = true,
       use_icons = true,
+
+      file_panel = {
+        win_config = {
+          position = "left",
+          width = 50, -- Default is 35
+        },
+      },
+
+      view = {
+        default = {
+          layout = "diff2_horizontal",
+        },
+        file_history = {
+          layout = "diff2_horizontal",
+        },
+        cycle_layouts = {
+          default = { "diff2_horizontal", "diff2_vertical" },
+        },
+      },
     },
     keys = {
       {

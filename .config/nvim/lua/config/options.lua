@@ -24,3 +24,7 @@ vim.opt.sessionoptions = {
 
 -- Options are: "snacks", "fzf", or "telescope"
 -- vim.g.lazyvim_picker = "snacks"
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
