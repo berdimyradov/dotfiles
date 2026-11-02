@@ -12,7 +12,6 @@ source "$THEME_CATPPUCCIN_DIR/tmux.sh"
 source "$THEME_CATPPUCCIN_DIR/nvim.sh"
 source "$THEME_CATPPUCCIN_DIR/lazygit.sh"
 source "$THEME_CATPPUCCIN_DIR/btop.sh"
-source "$THEME_CATPPUCCIN_DIR/alacritty.sh"
 source "$THEME_CATPPUCCIN_DIR/git-delta.sh"
 
 theme:_mode_to_flavor() {
