@@ -1,73 +1,79 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -u
 
-# Function to create a session if it doesn't exist
 create_session() {
-  session_name=$1
-  start_dir=$2
-  tmux has-session -t "$session_name" 2>/dev/null
-  if [ $? != 0 ]; then
-    tmux new-session -d -s "$session_name" -c "$start_dir"
-    return 0 # New session created
+  local name="$1" dir="$2"
+  if ! tmux has-session -t "$name" 2>/dev/null; then
+    tmux new-session -d -s "$name" -c "$dir"
+    return 0
   fi
-  return 1 # Session already exists
+  return 1
 }
 
-# --- 1. MISC ---
-if create_session "misc" "$HOME"; then
-  tmux new-window -t "misc" -c "$HOME"
-  tmux new-window -t "misc" -n "obsidian" -c "$HOME/my-projects/obsidian-vault"
+add_window() {
+  tmux new-window -t "$1" -n "$2" -c "$3"
+}
+
+add_command_window() {
+  add_window "$1" "$2" "$3"
+  tmux send-keys -t "$1:$2" "$4" Enter
+}
+
+add_run_window() {
+  local name="$1" dir="$2"
+  tmux rename-window -t "$name:1" run
+  tmux split-window -h -t "$name:1" -c "$dir"
+}
+
+# config
+if create_session 01-config "$HOME/.config"; then
+  tmux rename-window -t 01-config:1 nvim
+  add_window 01-config git "$HOME/.config"
+  add_window 01-config agent "$HOME/.config"
 fi
 
-# --- 2. CONFIG ---
-if create_session "config" "$HOME/.config"; then
-  tmux rename-window -t "config:1" "config"
-  tmux new-window -t "config" -n "shell" -c "$HOME/shell"
-  tmux new-window -t "config" n "vifm" -c "$HOME"
-  tmux new-window -t "config" -c "$HOME"
+# berdimyradov.com
+if create_session 02-berdimyradov.com "$HOME/repos/berdimyradov.com"; then
+  add_run_window 02-berdimyradov.com "$HOME/repos/berdimyradov.com"
+  add_command_window 02-berdimyradov.com nvim "$HOME/repos/berdimyradov.com" nvim
+  add_command_window 02-berdimyradov.com git "$HOME/repos/berdimyradov.com" lazygit
+  add_command_window 02-berdimyradov.com review "$HOME/repos/berdimyradov.com" tuicr
+  add_command_window 02-berdimyradov.com yazi "$HOME/repos/berdimyradov.com" yazi
 fi
 
-# --- 3. BERDIMYRADOV ---
-if create_session "berdimyradov" "$HOME/my-projects"; then
-  tmux new-window -t "berdimyradov" -n "main" -c "$HOME/my-projects/berdimyradov"
-  tmux new-window -t "berdimyradov" -n "site" -c "$HOME/my-projects/berdimyradov.com"
+# obsidian
+if create_session 03-obsidian /Users/berdimyradov/repos/obsidian-vault; then
+  add_command_window 03-obsidian nvim /Users/berdimyradov/repos/obsidian-vault nvim
+  add_command_window 03-obsidian git /Users/berdimyradov/repos/obsidian-vault lazygit
+  add_window 03-obsidian misc /Users/berdimyradov/repos/obsidian-vault
+  add_window 03-obsidian notes /Users/berdimyradov/repos/obsidian-vault
 fi
 
-# --- 4. FINLOFT ---
-if create_session "finloft" "$HOME/work/finloft"; then
-  # Window 0: Vim
-  tmux new-window -t "finloft:0" -n "vim" -c "$HOME/work/finloft"
-
-  # Window 1: Dev Services (2 panes)
-  tmux rename-window -t "finloft:1" "services"
-  tmux split-window -h -t "finloft:1" -c "$HOME/work/finloft"
-
-  # Send commands to the specific panes
-  tmux send-keys -t "finloft:1.1" "pnpm -F @finloft/mobile start:dev"  # Top pane
-  tmux send-keys -t "finloft:1.2" "pnpm -F @finloft/backend start:dev" # Bottom pane
-
-  # Window 2: Git
-  tmux new-window -t "finloft" -n "git" -c "$HOME/work/finloft"
-  tmux send-keys -t "finloft:2" "lazygit" Enter
-
-  # Window 3 & 4: Code Agents
-  tmux new-window -t "finloft" -n "code-agent-1" -c "$HOME/work/finloft"
-  tmux new-window -t "finloft" -n "code-agent-2" -c "$HOME/work/finloft"
-
-  # Window 5: Misc
-  tmux new-window -t "finloft" -n "misc" -c "$HOME/work/finloft"
+# jobpilot
+if create_session 04-jobpilot /Users/berdimyradov/repos/job-pilot; then
+  add_run_window 04-jobpilot /Users/berdimyradov/repos/job-pilot
+  add_command_window 04-jobpilot nvim /Users/berdimyradov/repos/job-pilot nvim
+  add_command_window 04-jobpilot git /Users/berdimyradov/repos/job-pilot lazygit
+  add_command_window 04-jobpilot review /Users/berdimyradov/repos/job-pilot tuicr
+  add_command_window 04-jobpilot agent /Users/berdimyradov/repos/job-pilot pi
+  add_command_window 04-jobpilot lsql /Users/berdimyradov/repos/job-pilot lazysql
+  add_command_window 04-jobpilot ldocker /Users/berdimyradov/repos/job-pilot lazydocker
 fi
 
-# --- 5. WORK ---
-if create_session "work" "$HOME/work"; then
-  tmux new-window -t "work" -c "$HOME/work"
-  tmux new-window -t "work" -c "$HOME/work"
+# badalga
+if create_session 05-badalga "$HOME/repos/badalga"; then
+  add_run_window 05-badalga "$HOME/repos/badalga"
+  add_command_window 05-badalga nvim "$HOME/repos/badalga" nvim
+  add_command_window 05-badalga git "$HOME/repos/badalga" lazygit
+  add_command_window 05-badalga review "$HOME/repos/badalga" tuicr
+  add_command_window 05-badalga agent "$HOME/repos/badalga" pi
+  add_command_window 05-badalga lsql "$HOME/repos/badalga" lazysql
+  add_command_window 05-badalga ldocker "$HOME/repos/badalga" lazydocker
 fi
 
-# --- 6. TamTam ---
-if create_session "tamtam" "$HOME/work/tamtam"; then
-  tmux new-window -t "tamtam" -n "main" -c "$HOME/work/tamtam"
-  tmux new-window -t "tamtam-design" -n "design" -c "$HOME/work/tamtam-design"
-  tmux new-window -t "tamtam-mobile" -n "mobile" -c "$HOME/work/tamtam-mobile"
+# misc
+if create_session 99-misc "$HOME"; then
+  tmux rename-window -t 99-misc:1 misc
 fi
 
 echo "Tmux sessions initialized!"

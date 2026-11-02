@@ -2,8 +2,9 @@
 
 live_config_reload = true
 
+# Theme reference: https://github.com/alacritty/alacritty-theme
 import = [
-  "~/.config/alacritty/themes/active_theme.toml",
+  "~/.config/alacritty/themes/catppuccin-mocha.toml",
 ]
 
 [window]

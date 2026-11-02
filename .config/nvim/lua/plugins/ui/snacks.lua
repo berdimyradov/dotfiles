@@ -3,6 +3,12 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
+    styles = {
+      notification = {
+        focusable = false,
+      },
+    },
+
     -- Enable the image viewer component
     image = {
       formats = { "png", "jpg", "jpeg", "gif", "bmp", "webp" },
