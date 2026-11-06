@@ -15,4 +15,4 @@ gui:
 
 os:
   editPreset: "nvim"
-  open: "code {{filename}}"
+  open: "open {{filename}}"
