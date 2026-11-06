@@ -21,7 +21,6 @@ source ~/.config/shell/terminal.sh
 
 # Optional
 # source ~/.config/shell/docker.sh
-# source ~/.rcs/flutter.sh
 
 ## `randy` aliases
 alias randy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p randy-cli --'
