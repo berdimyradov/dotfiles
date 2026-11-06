@@ -3,11 +3,10 @@
 THEME_DIR="${0:A:h}"
 THEME_LIGHT_FLAVOR="latte"
 THEME_DARK_FLAVOR="mocha"
-THEME_ENABLED_ADAPTERS=(ghostty tmux nvim lazygit btop)
+THEME_ENABLED_ADAPTERS=(tmux nvim lazygit btop)
 
 THEME_CATPPUCCIN_DIR="$THEME_DIR/catppuccin"
 
-source "$THEME_CATPPUCCIN_DIR/ghostty.sh"
 source "$THEME_CATPPUCCIN_DIR/tmux.sh"
 source "$THEME_CATPPUCCIN_DIR/nvim.sh"
 source "$THEME_CATPPUCCIN_DIR/lazygit.sh"
@@ -86,9 +85,6 @@ theme:_run_adapter() {
 
 theme:_adapter_label() {
   case "$1" in
-  ghostty)
-    printf '%s\n' "👻 ghostty"
-    ;;
   tmux)
     printf '%s\n' "🪟 tmux"
     ;;

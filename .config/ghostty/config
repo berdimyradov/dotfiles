@@ -9,8 +9,7 @@ adjust-cell-height = 1
 # ---------------------------------------------------------
 # Theme and Window Aesthetics
 # ---------------------------------------------------------
-# theme = light:Dayfox,dark:Carbonfox
-config-file = active_theme
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
 
 background-opacity = 1
 background-blur = true
@@ -50,7 +49,3 @@ window-decoration = false
 # keybind = alt+left=goto_split:left
 # keybind = alt+right=goto_split:right
 
-# ---------------------------------------------------------
-# Key tables
-# ---------------------------------------------------------
-config-file = key_tables/vim.conf
