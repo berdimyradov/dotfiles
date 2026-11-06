@@ -15,7 +15,7 @@ theme:_normalize_flavor() {
 }
 
 theme:btop() {
-  local flavor btop_dir themes_dir active_theme config_file theme_file
+  local flavor btop_dir themes_dir active_theme config_file theme_file grep_status uid pkill_output pkill_status
 
   flavor="$(theme:_normalize_flavor "${1:-}")" || {
     echo "Usage: theme:btop <light|dark>"
@@ -38,15 +38,64 @@ theme:btop() {
     return 1
   fi
 
-  ln -sfn "$theme_file" "$active_theme"
-
-  if grep -q '^color_theme[[:space:]]*=' "$config_file"; then
-    sed -i '' 's/^color_theme[[:space:]]*=.*/color_theme = "active"/' "$config_file"
-  else
-    printf '\ncolor_theme = "active"\n' >>"$config_file"
+  if ! ln -sfn "$theme_file" "$active_theme"; then
+    echo "failed to update btop active theme symlink: $active_theme" >&2
+    return 1
   fi
 
-  echo "📊 btop theme: $flavor"
+  if [[ ! -e "$config_file" && ! -L "$config_file" ]]; then
+    if ! printf '\ncolor_theme = "active"\n' >>"$config_file"; then
+      echo "failed to write btop config: $config_file" >&2
+      return 1
+    fi
+  else
+    if grep -q '^color_theme[[:space:]]*=' "$config_file"; then
+      if ! sed -i '' 's/^color_theme[[:space:]]*=.*/color_theme = "active"/' "$config_file"; then
+        echo "failed to update btop config: $config_file" >&2
+        return 1
+      fi
+    else
+      grep_status=$?
+      if [[ "$grep_status" -ne 1 ]]; then
+        echo "failed to read btop config: $config_file" >&2
+        return 1
+      fi
+      if ! printf '\ncolor_theme = "active"\n' >>"$config_file"; then
+        echo "failed to write btop config: $config_file" >&2
+        return 1
+      fi
+    fi
+  fi
+
+  if ! uid="$(id -u)"; then
+    echo "failed to determine current user ID; btop theme was updated without signaling" >&2
+    return 1
+  fi
+
+  if pkill_output="$(pkill -USR2 -u "$uid" -x btop 2>&1)"; then
+    pkill_status=0
+  else
+    pkill_status=$?
+  fi
+
+  if [[ -n "$pkill_output" ]]; then
+    printf '%s\n' "$pkill_output" >&2
+    echo "failed to request btop theme reload" >&2
+    return 1
+  fi
+
+  case "$pkill_status" in
+    0)
+      echo "📊 btop theme: $flavor; reload requested"
+      ;;
+    1)
+      echo "📊 btop theme: $flavor; no running btop instances, applies on next launch"
+      ;;
+    *)
+      echo "failed to request btop theme reload (pkill exit $pkill_status)" >&2
+      return 1
+      ;;
+  esac
 }
 
 theme:_btop_main() {
