@@ -135,6 +135,10 @@ return {
     local function get_palette()
       local colorscheme = vim.g.colors_name or ""
 
+      if colorscheme == "catppuccin" then
+        colorscheme = vim.o.background == "light" and "catppuccin-latte" or "catppuccin-mocha"
+      end
+
       if palettes[colorscheme] then
         return palettes[colorscheme]
       end

@@ -21,11 +21,11 @@ return {
     },
   },
 
-  -- Catppuccin resolves its flavour from the standard 'background' option.
+  -- Catppuccin follows Neovim's background, which detects native appearance changes.
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-nvim",
+      colorscheme = "catppuccin",
     },
   },
 }
