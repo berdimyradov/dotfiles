@@ -1,4 +1,12 @@
-[[mgr.prepend_keymap]]
-on   = "E"
-run  = '''shell --block -- printf 'Eject %%s? [y/N] ' %h; read answer; [[ $answer == [yY] ]] && diskutil eject %h'''
-desc = "Eject the hovered volume via diskutil"
+[mgr]
+prepend_keymap = [
+  # Actions
+  { on = "R", run = 'shell --block -- bash ~/.config/yazi/scripts/run-file.sh %h', desc = "Run hovered file" },
+  { on = "E", run = 'shell --block -- bash ~/.config/yazi/scripts/eject.sh %h', desc = "Eject hovered volume", for = "macos" },
+
+  # Navigation
+  { on = ["g", "o"], run = 'cd "~/Library/CloudStorage/GoogleDrive-kberdimyradov@gmail.com/My Drive/Obsidian/obsidian-vault"', desc = "Go to Obsidian vault" },
+  { on = ["g", "r"], run = "cd ~/repos", desc = "Go to repos" },
+  { on = ["g", "v"], run = 'cd "~/Library/CloudStorage/GoogleDrive-kberdimyradov@gmail.com/My Drive"', desc = "Go to Google Drive" },
+  { on = ["g", "m"], run = 'cd "~/Library/Group Containers/group.com.apple.VoiceMemos.shared/Recordings"', desc = "Go to Voice Memos" },
+]
