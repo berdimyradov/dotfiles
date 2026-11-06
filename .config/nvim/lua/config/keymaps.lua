@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader>y", function()
     win = {
       position = "float",
       relative = "editor",
-      border = "none",
+      border = "double",
     },
   })
 end, { desc = "Open Yazi in a floating terminal" })

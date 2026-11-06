@@ -15,18 +15,13 @@ vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHo
   callback = reload_changed_buffer,
 })
 
--- Retain Catppuccin's CursorLine background while making the active Neo-tree row bold.
--- local function apply_neotree_cursorline()
---   local cursorline = vim.api.nvim_get_hl(0, { name = "CursorLine", link = false })
---   vim.api.nvim_set_hl(0, "NeoTreeCursorLine", {
---     bg = cursorline.bg,
---     bold = true,
---   })
--- end
---
--- vim.api.nvim_create_autocmd("ColorScheme", {
---   group = vim.api.nvim_create_augroup("NeoTreeCursorLine", { clear = true }),
---   callback = apply_neotree_cursorline,
+-- TODO: FIX: not working
+-- Automatically enforce English and Russian spellcheck for Markdown files
+-- vim.api.nvim_create_autocmd("FileType", {
+--   group = vim.api.nvim_create_augroup("lazyvim_markdown_spell", { clear = true }),
+--   pattern = { "markdown", "gitcommit" },
+--   callback = function()
+--     vim.opt_local.spell = true
+--     vim.opt_local.spelllang = { "en", "ru" }
+--   end,
 -- })
---
--- apply_neotree_cursorline()

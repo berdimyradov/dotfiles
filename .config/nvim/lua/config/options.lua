@@ -5,6 +5,7 @@
 -- TESTING Font size setting
 -- vim.o.guifont = "JetBrainsMono Nerd Font:h18"
 
+vim.opt.swapfile = false
 -- Automatically reload files changed outside of Neovim (e.g., via git or external tools)
 vim.opt.autoread = true
 
@@ -28,3 +29,6 @@ vim.opt.sessionoptions = {
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
+-- vim.opt.tabstop = 4
+-- vim.opt.shiftwidth = 4
+-- vim.opt.expandtab = true
