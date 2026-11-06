@@ -3,11 +3,10 @@
 THEME_DIR="${0:A:h}"
 THEME_LIGHT_FLAVOR="latte"
 THEME_DARK_FLAVOR="mocha"
-THEME_ENABLED_ADAPTERS=(tmux nvim btop)
+THEME_ENABLED_ADAPTERS=(nvim btop)
 
 THEME_CATPPUCCIN_DIR="$THEME_DIR/catppuccin"
 
-source "$THEME_CATPPUCCIN_DIR/tmux.sh"
 source "$THEME_CATPPUCCIN_DIR/nvim.sh"
 source "$THEME_CATPPUCCIN_DIR/btop.sh"
 source "$THEME_CATPPUCCIN_DIR/git-delta.sh"
@@ -84,9 +83,6 @@ theme:_run_adapter() {
 
 theme:_adapter_label() {
   case "$1" in
-  tmux)
-    printf '%s\n' "🪟 tmux"
-    ;;
   nvim)
     printf '%s\n' "🪶 nvim"
     ;;
