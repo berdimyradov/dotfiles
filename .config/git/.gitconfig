@@ -154,9 +154,6 @@
 	editor = /usr/bin/vim
   pager = hunk pager
 
-[include]
-  ; path = ~/.config/git/delta/.gitconfig
-
 [merge]
     conflictstyle = diff3
 

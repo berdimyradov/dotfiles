@@ -5,7 +5,6 @@ THEME_DIR="${0:A:h}"
 THEME_CATPPUCCIN_DIR="$THEME_DIR/catppuccin"
 
 source "$THEME_CATPPUCCIN_DIR/btop.sh"
-source "$THEME_CATPPUCCIN_DIR/git-delta.sh"
 
 theme:_set_macos_appearance() {
   local mode="$1"

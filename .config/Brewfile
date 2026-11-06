@@ -18,7 +18,6 @@ brew "nmap"
 # Git / GitHub
 brew "gh"
 brew "lazygit"
-# brew "git-delta"
 # brew "git-lfs"
 
 # Editors / file managers
