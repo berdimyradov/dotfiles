@@ -1,2 +1,9 @@
-theme = "catppuccin-latte"
-diff_view = "unified"   # "side-by-side" or "unified"
+# DOCS at https://github.com/agavra/tuicr#configuration
+
+appearance = "system"
+theme_light = "catppuccin-latte"
+theme_dark = "catppuccin-mocha"
+
+diff_view = "unified" # "side-by-side" or "unified"
+single_file_view = true
+comment_vim = true
