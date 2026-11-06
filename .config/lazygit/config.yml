@@ -3,6 +3,45 @@
 #
 gui:
   nerdFontsVersion: "3"
+  # Select lightTheme/darkTheme from the terminal's background.
+  colorScheme: auto
+  # Edit the palettes below to change themes; the source files are references only.
+  # Copy a source file's gui.theme fields here, with gui.authorColors alongside them.
+  #
+  # Catppuccin Latte, blue accent (source relative to this config):
+  # themes/catppuccin/latte/blue.yml
+  lightTheme:
+    activeBorderColor: ["#1e66f5", bold]
+    inactiveBorderColor: ["#6c6f85"]
+    searchingActiveBorderColor: ["#df8e1d"]
+    optionsTextColor: ["#1e66f5"]
+    selectedLineBgColor: ["#ccd0da"]
+    inactiveViewSelectedLineBgColor: ["#9ca0b0"]
+    cherryPickedCommitFgColor: ["#1e66f5"]
+    cherryPickedCommitBgColor: ["#bcc0cc"]
+    markedBaseCommitFgColor: ["#1e66f5"]
+    markedBaseCommitBgColor: ["#df8e1d"]
+    unstagedChangesColor: ["#d20f39"]
+    defaultFgColor: ["#4c4f69"]
+    authorColors:
+      "*": "#7287fd"
+  # Catppuccin Mocha, blue accent (source relative to this config):
+  # themes/catppuccin/mocha/blue.yml
+  darkTheme:
+    activeBorderColor: ["#89b4fa", bold]
+    inactiveBorderColor: ["#a6adc8"]
+    searchingActiveBorderColor: ["#f9e2af"]
+    optionsTextColor: ["#89b4fa"]
+    selectedLineBgColor: ["#313244"]
+    inactiveViewSelectedLineBgColor: ["#6c7086"]
+    cherryPickedCommitFgColor: ["#89b4fa"]
+    cherryPickedCommitBgColor: ["#45475a"]
+    markedBaseCommitFgColor: ["#89b4fa"]
+    markedBaseCommitBgColor: ["#f9e2af"]
+    unstagedChangesColor: ["#f38ba8"]
+    defaultFgColor: ["#cdd6f4"]
+    authorColors:
+      "*": "#b4befe"
   # Fraction of the total screen width to use for the left side section. You may
   # want to pick a small number (e.g. 0.2) if you're using a narrow screen, so
   # that you can see more of the main section.

@@ -1,0 +1,14 @@
+{
+  "/Users/berdimyradov/repos/badalga": null,
+  "/Users/berdimyradov/repos/berdimyradov.com": null,
+  "/Users/berdimyradov/repos/job-pilot": [
+    {
+      "headRefName": "dev",
+      "number": 2,
+      "title": "Enhance JobPilot with PostgreSQL integration and OpenSpec features",
+      "state": "MERGED",
+      "url": "https://github.com/berdimyradov/job-pilot/pull/2",
+      "headRepositoryOwner": "berdimyradov"
+    }
+  ]
+}

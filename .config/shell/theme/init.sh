@@ -3,13 +3,12 @@
 THEME_DIR="${0:A:h}"
 THEME_LIGHT_FLAVOR="latte"
 THEME_DARK_FLAVOR="mocha"
-THEME_ENABLED_ADAPTERS=(tmux nvim lazygit btop)
+THEME_ENABLED_ADAPTERS=(tmux nvim btop)
 
 THEME_CATPPUCCIN_DIR="$THEME_DIR/catppuccin"
 
 source "$THEME_CATPPUCCIN_DIR/tmux.sh"
 source "$THEME_CATPPUCCIN_DIR/nvim.sh"
-source "$THEME_CATPPUCCIN_DIR/lazygit.sh"
 source "$THEME_CATPPUCCIN_DIR/btop.sh"
 source "$THEME_CATPPUCCIN_DIR/git-delta.sh"
 
@@ -90,9 +89,6 @@ theme:_adapter_label() {
     ;;
   nvim)
     printf '%s\n' "🪶 nvim"
-    ;;
-  lazygit)
-    printf '%s\n' "🔀 lazygit"
     ;;
   btop)
     printf '%s\n' "📊 btop"
