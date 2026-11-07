@@ -1,0 +1,43 @@
+# Local machine state and sensitive values
+.DS_Store
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+*.secret
+*.secret.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.mobileprovision
+*.db
+*.sqlite
+*.sqlite3
+*.sock
+*.pid
+
+# Runtime data kept beside app configuration
+.config/**/cache/
+.config/**/caches/
+.config/**/log/
+.config/**/logs/
+.config/**/sessions/
+.config/**/history
+.config/**/history.*
+.config/**/state
+.config/**/state.*
+
+# Pi credentials and machine-local runtime data
+.pi/agent/auth.json
+.pi/agent/trust.json
+.pi/agent/settings.json
+.pi/agent/models-store.json
+.pi/agent/sessions/
+.pi/agent/bin/
+
+# App-generated local state
+.config/lazygit/github_pull_requests.json
+.config/nvim/nvim.log
+.config/tmux/plugins/
