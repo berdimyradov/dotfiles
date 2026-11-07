@@ -2,6 +2,11 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Explorer related keymaps
+vim.keymap.set("n", "<leader>er", "<cmd>Neotree reveal<cr>", {
+  desc = "Reveal current file in Neo-tree",
+})
+
 -- Open Yazi in a floating terminal rooted at the current file's directory.
 vim.keymap.set("n", "<leader>y", function()
   Snacks.terminal("yazi", {

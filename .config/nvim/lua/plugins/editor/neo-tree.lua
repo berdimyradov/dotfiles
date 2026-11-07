@@ -59,7 +59,7 @@ return {
       },
       filesystem = {
         follow_current_file = {
-          enabled = true,
+          enabled = false,
         },
         filtered_items = {
           visible = true,
