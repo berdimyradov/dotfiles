@@ -17,7 +17,8 @@ alias lfcat='find . -type f -exec echo "Filename: {}" \; -exec cat {} \;'
 # ────────────────────────────────────────────────────────────────────────────────
 
 # Manage $HOME as a git worktree backed by a bare repo at ~/.dotfiles
-alias config='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias dot='git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias ldot='lazygit --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 
 # ────────────────────────────────────────────────────────────────────────────────
 # System / Notifications
