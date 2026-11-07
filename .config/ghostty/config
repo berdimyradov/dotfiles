@@ -4,7 +4,13 @@
 font-family = "JetBrains Mono Nerd Font"
 font-size = 16
 font-thicken = true
-adjust-cell-height = 1
+
+# Optional font metrics tuning.
+# `adjust-cell-height` affects terminal row sizing and caused padding here.
+# `adjust-font-baseline` moves glyphs within a row: positive = up, negative = down.
+#
+# adjust-cell-height = 1
+# adjust-font-baseline = 0
 
 # ---------------------------------------------------------
 # Theme and Window Aesthetics
