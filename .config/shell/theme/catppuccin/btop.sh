@@ -15,7 +15,7 @@ theme:_normalize_flavor() {
 }
 
 theme:btop() {
-  local flavor btop_dir themes_dir active_theme config_file theme_file grep_status uid pkill_output pkill_status
+  local flavor btop_dir themes_dir config_file theme_file grep_status uid pkill_output pkill_status
 
   flavor="$(theme:_normalize_flavor "${1:-}")" || {
     echo "Usage: theme:btop <light|dark>"
@@ -24,7 +24,6 @@ theme:btop() {
 
   btop_dir="$HOME/.config/btop"
   themes_dir="$btop_dir/themes"
-  active_theme="$themes_dir/active.theme"
   config_file="$btop_dir/btop.conf"
   theme_file="$themes_dir/$flavor.theme"
 
@@ -33,24 +32,14 @@ theme:btop() {
     return 1
   fi
 
-  if [[ -e "$active_theme" && ! -L "$active_theme" ]]; then
-    echo "btop active theme exists and is not a symlink: $active_theme"
-    return 1
-  fi
-
-  if ! ln -sfn "$theme_file" "$active_theme"; then
-    echo "failed to update btop active theme symlink: $active_theme" >&2
-    return 1
-  fi
-
   if [[ ! -e "$config_file" && ! -L "$config_file" ]]; then
-    if ! printf '\ncolor_theme = "active"\n' >>"$config_file"; then
+    if ! printf '\ncolor_theme = "%s"\n' "$flavor" >>"$config_file"; then
       echo "failed to write btop config: $config_file" >&2
       return 1
     fi
   else
     if grep -q '^color_theme[[:space:]]*=' "$config_file"; then
-      if ! sed -i '' 's/^color_theme[[:space:]]*=.*/color_theme = "active"/' "$config_file"; then
+      if ! sed -i '' "s/^color_theme[[:space:]]*=.*/color_theme = \"$flavor\"/" "$config_file"; then
         echo "failed to update btop config: $config_file" >&2
         return 1
       fi
@@ -60,7 +49,7 @@ theme:btop() {
         echo "failed to read btop config: $config_file" >&2
         return 1
       fi
-      if ! printf '\ncolor_theme = "active"\n' >>"$config_file"; then
+      if ! printf '\ncolor_theme = "%s"\n' "$flavor" >>"$config_file"; then
         echo "failed to write btop config: $config_file" >&2
         return 1
       fi
