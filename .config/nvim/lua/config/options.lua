@@ -2,8 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
--- TESTING Font size setting
--- vim.o.guifont = "JetBrainsMono Nerd Font:h18"
+-- GUI clients only: `guifont` controls Neovim's font in clients such as Neovide.
+-- In terminal Neovim, the terminal emulator (Ghostty) controls the font instead.
+-- vim.o.guifont = "JetBrainsMonoNL Nerd Font Mono:h18"
 
 vim.opt.swapfile = false
 -- Automatically reload files changed outside of Neovim (e.g., via git or external tools)

@@ -1,7 +1,7 @@
 # ---------------------------------------------------------
 # Typography
 # ---------------------------------------------------------
-font-family = "JetBrains Mono Nerd Font"
+font-family = "JetBrainsMonoNL Nerd Font Mono"
 font-size = 16
 font-thicken = true
 
@@ -32,7 +32,7 @@ window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
 window-padding-color = background
-# window-step-resize = true
+window-step-resize = true
 maximize = true
 # Strips the title bar and rounds down corner radiuses completely
 window-decoration = false
