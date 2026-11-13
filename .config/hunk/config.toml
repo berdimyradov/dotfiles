@@ -1,6 +1,13 @@
-theme = "catppuccin-latte" # any built-in theme id, auto, or custom
-mode = "split"        # auto, split, stack
-vcs = "git"          # git, jj, sl
+# @setting theme
+# @type {string} Theme ID, "auto", or "terminal"
+# @default "auto"
+# @description "auto" selects GitHub Light/Dark from the terminal background.
+#              "terminal" follows the terminal's color palette.
+# @see https://www.hunk.dev/docs/configure/themes/
+theme = "auto"
+
+mode = "split" # auto, split, stack
+vcs = "git" # git, jj, sl
 watch = false
 exclude_untracked = false
 line_numbers = true
