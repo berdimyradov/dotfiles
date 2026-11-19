@@ -2,8 +2,9 @@
 # Editor
 # ────────────────────────────────────────────────────────────────────────────────
 
-alias vim="nvim"
-alias zshconfig="nvim ~/.zshrc"
+# alias vim="nvim"
+alias zedit="nvim ~/.zshrc"
+alias zreload='source ~/.zshrc'
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Filesystem
@@ -26,6 +27,25 @@ alias ldot='lazygit --git-dir="$HOME/.dotfiles" --work-tree="$HOME"'
 
 alias bell='afplay /System/Library/Sounds/Ping.aiff'
 alias notify="osascript -e 'display notification \"Command has completed\" with title \"Notification\" sound name \"Ping\"'"
+alias timer='sleep'
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Randy
+# ────────────────────────────────────────────────────────────────────────────────
+
+alias randy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p randy-cli --'
+alias lazyrandy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p lazyrandy --'
+# `dev-randy`
+alias dev-randy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p randy-cli --'
+alias dev-lazyrandy='cargo run --manifest-path ~/my-projects/randy/Cargo.toml -p lazyrandy --'
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Excalidraw
+# ────────────────────────────────────────────────────────────────────────────────
+
+alias xu='_excalidraw_up'
+alias xd='docker stop excalidraw'
+alias xr='_excalidraw_up'
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Date / Time

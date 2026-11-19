@@ -1,5 +1,0 @@
-# Opt-out Telemetry
-export DO_NOT_TRACK=1
-export HOMEBREW_NO_ANALYTICS=1
-export NEXT_TELEMETRY_DISABLED=1
-export OPENSPEC_TELEMETRY=0

@@ -12,6 +12,12 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# Opt-out Telemetry
+export DO_NOT_TRACK=1
+export HOMEBREW_NO_ANALYTICS=1
+export NEXT_TELEMETRY_DISABLED=1
+export OPENSPEC_TELEMETRY=0
+
 # MY CUSTOM CONFIGS HERE!!!
 export PATH="/usr/local/bin:${PATH}" # User Homebrew installed as default
 export PATH=$PATH:/opt/homebrew/bin

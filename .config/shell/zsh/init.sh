@@ -1,7 +1,0 @@
-source ~/.config/shell/zsh/zsh.sh
-source ~/.config/shell/zsh/aliases.sh
-
-# Powerline related configs
-#if [ $ZSH_THEME = 'powerlevel9k/powerlevel9k'd ]; then
-# source ~/.config/shell/zsh/powerline.sh
-#fi
