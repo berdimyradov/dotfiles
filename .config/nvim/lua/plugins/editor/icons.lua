@@ -22,11 +22,13 @@ return {
     "echasnovski/mini.icons",
     opts = {
       extension = {
-        sh = { glyph = "", hl = "MiniIconsRed" },
+        sh = { glyph = "", hl = "MiniIconsGrey" },
+        zsh = { glyph = "", hl = "MiniIconsGrey" },
       },
       file = {},
       filetype = {
-        sh = { glyph = "", hl = "MiniIconsRed" },
+        sh = { glyph = "", hl = "MiniIconsGrey" },
+        zsh = { glyph = "", hl = "MiniIconsGrey" },
       },
     },
   },
