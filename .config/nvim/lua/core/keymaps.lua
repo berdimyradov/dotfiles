@@ -1,25 +1,4 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
-vim.opt.termguicolors = true
-vim.opt.swapfile = false
-vim.opt.autoread = true
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.breakindent = true
-vim.opt.laststatus = 2
-vim.opt.completeopt = { "menu", "menuone", "noselect", "popup" }
-vim.opt.sessionoptions = {
-  "buffers",
-  "curdir",
-  "folds",
-  "globals",
-  "help",
-  "tabpages",
-  "winsize",
-  "terminal",
-  "localoptions",
-}
+vim.keymap.set("n", "<leader>r", "<cmd>source $MYVIMRC | echo 'Config reloaded!'<CR>", { desc = "Reload init.lua" })
 
 vim.keymap.set("n", "<leader>ff", function()
   Snacks.picker.files()
@@ -63,15 +42,3 @@ vim.keymap.set("n", "<leader>qr", "<cmd>AutoSession restore<cr>", { desc = "Sess
 vim.keymap.set("n", "<leader>qw", "<cmd>AutoSession save<cr>", { desc = "Session Save" })
 vim.keymap.set("n", "<leader>qd", "<cmd>AutoSession delete<cr>", { desc = "Session Delete" })
 vim.keymap.set("n", "<leader>qa", "<cmd>AutoSession toggle<cr>", { desc = "Session Toggle Autosave" })
-
-local function reload_changed_buffer()
-  if vim.fn.mode() ~= "c" and vim.fn.bufexists(vim.fn.bufnr()) == 1 then
-    vim.cmd("checktime")
-  end
-end
-
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
-  group = vim.api.nvim_create_augroup("AutoReloadBuffer", { clear = true }),
-  pattern = "*",
-  callback = reload_changed_buffer,
-})

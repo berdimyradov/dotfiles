@@ -5,6 +5,11 @@
       "src": "https://github.com/rmagatti/auto-session.git",
       "version": "'02a5588f677970a9bc784115c62bef9e5855499b'"
     },
+    "bufferline.nvim": {
+      "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
+      "src": "https://github.com/akinsho/bufferline.nvim.git",
+      "version": "'655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3'"
+    },
     "catppuccin": {
       "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",
       "src": "https://github.com/catppuccin/nvim.git",
@@ -24,6 +29,11 @@
       "rev": "760d9701953ad2b0277fe9776ba99bb011ecac2b",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim.git",
       "version": "'760d9701953ad2b0277fe9776ba99bb011ecac2b'"
+    },
+    "noice.nvim": {
+      "rev": "cf758e9df66451889aab56613a21b8673f045ec2",
+      "src": "https://github.com/folke/noice.nvim.git",
+      "version": "'v4.10.0'"
     },
     "nui.nvim": {
       "rev": "10fc361835c856ba4233ef5ea135b919bf3dce97",
