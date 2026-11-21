@@ -21,6 +21,19 @@ return {
       },
     },
 
+    -- dashboard = {
+    --   enabled = false,
+    --   preset = {
+    --     header = "Welcome back",
+    --   },
+    --   sections = {
+    --     { section = "header" },
+    --     { section = "keys", gap = 1, padding = 1 },
+    --     { section = "recent_files", limit = 5, padding = 1 },
+    --     { section = "startup" },
+    --   },
+    -- },
+
     -- Picker
     -- picker = {
     --   layout = {

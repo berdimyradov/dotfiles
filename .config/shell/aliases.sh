@@ -2,7 +2,8 @@
 # Editor
 # ────────────────────────────────────────────────────────────────────────────────
 
-# alias vim="nvim"
+alias vim="nvim"
+alias lazyvim='NVIM_APPNAME=nvim-lazyvim nvim'
 alias zedit="nvim ~/.zshrc"
 alias zreload='source ~/.zshrc'
 

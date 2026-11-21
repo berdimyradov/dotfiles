@@ -1,0 +1,54 @@
+{
+  "plugins": {
+    "auto-session": {
+      "rev": "02a5588f677970a9bc784115c62bef9e5855499b",
+      "src": "https://github.com/rmagatti/auto-session.git",
+      "version": "'02a5588f677970a9bc784115c62bef9e5855499b'"
+    },
+    "catppuccin": {
+      "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",
+      "src": "https://github.com/catppuccin/nvim.git",
+      "version": "'edefef779ab08ce1a4a404713e3012b0d202bd35'"
+    },
+    "gitsigns.nvim": {
+      "rev": "c0862d382a35b7b45757d8d151a6a634c09bf3ce",
+      "src": "https://github.com/lewis6991/gitsigns.nvim.git",
+      "version": "'c0862d382a35b7b45757d8d151a6a634c09bf3ce'"
+    },
+    "mason.nvim": {
+      "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
+      "src": "https://github.com/mason-org/mason.nvim.git",
+      "version": "'2a6940af80375532e5e9e7c1f2fc6319a1b7a69d'"
+    },
+    "neo-tree.nvim": {
+      "rev": "760d9701953ad2b0277fe9776ba99bb011ecac2b",
+      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim.git",
+      "version": "'760d9701953ad2b0277fe9776ba99bb011ecac2b'"
+    },
+    "nui.nvim": {
+      "rev": "10fc361835c856ba4233ef5ea135b919bf3dce97",
+      "src": "https://github.com/MunifTanjim/nui.nvim.git",
+      "version": "'10fc361835c856ba4233ef5ea135b919bf3dce97'"
+    },
+    "nvim-lspconfig": {
+      "rev": "4648fd8ba5c678d7e2db75ae44ffac269bb589d8",
+      "src": "https://github.com/neovim/nvim-lspconfig.git",
+      "version": "'4648fd8ba5c678d7e2db75ae44ffac269bb589d8'"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim.git",
+      "version": "'74b06c6c75e4eeb3108ec01852001636d85a932b'"
+    },
+    "real-icons.nvim": {
+      "rev": "9c13a7a3f3072fbceb847c8db15e941b60ea666f",
+      "src": "https://github.com/Mirsmog/real-icons.nvim.git",
+      "version": "'9c13a7a3f3072fbceb847c8db15e941b60ea666f'"
+    },
+    "snacks.nvim": {
+      "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
+      "src": "https://github.com/folke/snacks.nvim.git",
+      "version": "'882c996cf28183f4d63640de0b4c02ec886d01f2'"
+    }
+  }
+}
